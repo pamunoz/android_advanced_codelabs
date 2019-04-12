@@ -39,4 +39,14 @@ class MainActivity : AppCompatActivity() {
         // Set boolean flag to indicate fragment is open.
         isDisplayed = true
     }
+
+    fun closeFragment() {
+        // Check to see if the fragment is already showing.
+        val simpleFragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as SimpleFragment
+        simpleFragment.let { supportFragmentManager.beginTransaction().remove(it).commit() }
+        // Update the Button text.
+        btn_open.text = getString(R.string.open)
+        // Set boolean flag to indicate fragment is closed.
+        isDisplayed = false
+    }
 }
