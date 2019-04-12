@@ -27,6 +27,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Set the click listener for the button.
+        btn_open.setOnClickListener {
+            if (!isDisplayed) displayFragment() else closeFragment()
+        }
     }
 
     fun displayFragment() {
