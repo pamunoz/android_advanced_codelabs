@@ -8,16 +8,16 @@
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
-        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.1.0-alpha05.aar\\225d4f82e0b23f681ad67266930a4f04\\res\\drawable\\notification_icon_background.xml"
+        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
+        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
-        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png"
+        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
+        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.1.0-alpha05.aar\\225d4f82e0b23f681ad67266930a4f04\\res\\drawable\\notification_icon_background.xml"
     },
     {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
@@ -72,24 +72,24 @@
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
-        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",
-        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\media-1.0.0.aar\\925b8756d65687e0c39582eb2f3f54f3\\res\\layout\\notification_media_action.xml"
-    },
-    {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.1.0-alpha05.aar\\225d4f82e0b23f681ad67266930a4f04\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_16dp.png.flat",
-        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
+        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",
+        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\media-1.0.0.aar\\925b8756d65687e0c39582eb2f3f54f3\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
+        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
-        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_light.9.png"
+        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_16dp.png.flat",
+        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -160,12 +160,12 @@
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
-        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\color-v21_abc_btn_colored_borderless_text_material.xml.flat",
-        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\color-v21\\abc_btn_colored_borderless_text_material.xml"
-    },
-    {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-ldrtl-xxhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\color-v21_abc_btn_colored_borderless_text_material.xml.flat",
+        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\color-v21\\abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",
@@ -340,12 +340,12 @@
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_black_16dp.png.flat",
-        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png"
-    },
-    {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_light.xml.flat",
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_black_16dp.png.flat",
+        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_go_search_api_material.xml.flat",
@@ -468,12 +468,12 @@
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
-        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_light.xml.flat",
-        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable\\tooltip_frame_light.xml"
-    },
-    {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg.xml.flat",
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.1.0-alpha05.aar\\225d4f82e0b23f681ad67266930a4f04\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_light.xml.flat",
+        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable\\tooltip_frame_light.xml"
     },
     {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -520,20 +520,20 @@
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_half_black_16dp.png.flat",
-        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png"
-    },
-    {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.1.0-alpha05.aar\\225d4f82e0b23f681ad67266930a4f04\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_half_black_16dp.png.flat",
+        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\layout-watch-v20\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.1.0-alpha05.aar\\225d4f82e0b23f681ad67266930a4f04\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_icon_group.xml.flat",
@@ -552,12 +552,12 @@
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
-    },
-    {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_toolbar.xml.flat",
         "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.1.0-alpha04.aar\\0496e2423de7926e0321f6e65d9c020f\\res\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
         "merged": "D:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentExample1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",

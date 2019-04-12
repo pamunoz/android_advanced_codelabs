@@ -842,6 +842,7 @@ id radio_group
 id right
 id right_icon
 id right_side
+id rtb_song_rating
 id screen
 id scrollIndicatorDown
 id scrollIndicatorUp
@@ -1002,6 +1003,7 @@ string no
 string no_message
 string open
 string question_article
+string question_song
 string search_menu_title
 string status_bar_notification_info_overflow
 string title1
