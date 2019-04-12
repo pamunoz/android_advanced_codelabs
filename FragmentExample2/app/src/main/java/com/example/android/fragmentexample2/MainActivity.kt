@@ -18,6 +18,7 @@ package com.example.android.fragmentexample2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,5 +27,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
+
+    fun displayFragment() {
+        // Add the SimpleFragment.
+        supportFragmentManager.beginTransaction().apply {
+            add(R.id.fragment_container, SimpleFragment.newInstance).addToBackStack(null).commit()
+        }
+        //Update the Button text
+        btn_open.text = getString(R.string.close)
+        // Set boolean flag to indicate fragment is open.
+        isDisplayed = true
     }
 }
