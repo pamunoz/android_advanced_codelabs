@@ -24,9 +24,18 @@ class MainActivity : AppCompatActivity() {
 
     private var isDisplayed = false
 
+    companion object {
+        const val STATE_FRAGMENT = "state_of_fragment"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        savedInstanceState?.let {
+            isDisplayed = savedInstanceState.getBoolean(STATE_FRAGMENT)
+            if (isDisplayed) btn_open.text = getString(R.string.close)
+        }
 
         // Set the click listener for the button.
         btn_open.setOnClickListener {
@@ -34,24 +43,30 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun displayFragment() {
+    private fun displayFragment() {
         // Add the SimpleFragment.
         supportFragmentManager.beginTransaction().apply {
-            add(R.id.fragment_container, SimpleFragment.newInstance).addToBackStack(null).commit()
-        }
+            add(R.id.fragment_container, SimpleFragment.newInstance).addToBackStack(null)
+        }.commit()
         //Update the Button text
         btn_open.text = getString(R.string.close)
         // Set boolean flag to indicate fragment is open.
         isDisplayed = true
     }
 
-    fun closeFragment() {
+    private fun closeFragment() {
         // Check to see if the fragment is already showing.
         val simpleFragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as SimpleFragment
-        simpleFragment.let { supportFragmentManager.beginTransaction().remove(it).commit() }
+        simpleFragment?.let { supportFragmentManager.beginTransaction().remove(it).commit() }
         // Update the Button text.
         btn_open.text = getString(R.string.open)
         // Set boolean flag to indicate fragment is closed.
         isDisplayed = false
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putBoolean(STATE_FRAGMENT, isDisplayed)
+        super.onSaveInstanceState(outState)
+    }
+
 }

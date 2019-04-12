@@ -21,7 +21,7 @@ class SimpleFragment : Fragment() {
         const val YES = 0
         const val NO = 1
 
-        val newInstance = Fragment()
+        val newInstance = SimpleFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

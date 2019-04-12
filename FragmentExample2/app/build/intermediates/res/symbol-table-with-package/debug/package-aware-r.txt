@@ -767,6 +767,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btn_open
 id buttonPanel
 id cancel_action
 id center
@@ -798,7 +799,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id forever
-id fragment
+id fragment_container
 id gone
 id group_divider
 id groups
