@@ -63,6 +63,7 @@
             android:layout_gravity="center"
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
+            android:isIndicator="false"
             android:layout_height="wrap_content"
             android:paddingLeft="8dp" />
 
