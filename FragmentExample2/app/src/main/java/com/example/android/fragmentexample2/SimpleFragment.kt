@@ -20,6 +20,8 @@ class SimpleFragment : Fragment() {
     companion object {
         const val YES = 0
         const val NO = 1
+
+        val newInstance = Fragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
