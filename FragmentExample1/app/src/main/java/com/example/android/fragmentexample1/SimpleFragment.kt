@@ -6,6 +6,8 @@ import android.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_simple.*
+import kotlinx.android.synthetic.main.fragment_simple.view.*
 
 /**
  * A simple [Fragment] subclass.
@@ -13,10 +15,28 @@ import android.view.ViewGroup
  */
 class SimpleFragment : Fragment() {
 
+    companion object {
+        const val YES = 0
+        const val NO = 1
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_simple, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_simple, container, false)
+
+
+        radio_group.setOnCheckedChangeListener { _, checkedId ->
+            val radioButton: View = radio_group.findViewById(checkedId)
+            val childIndex = radio_group.indexOfChild(radioButton)
+            val textView = rootView.tv_fragment_header
+            when(childIndex) {
+                YES -> textView.text = getString(R.string.yes_message)
+                NO -> textView.text = getString(R.string.no_message)
+            }
+        }
+
+        return rootView
     }
 
 
