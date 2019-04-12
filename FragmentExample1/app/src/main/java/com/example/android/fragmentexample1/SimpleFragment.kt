@@ -27,7 +27,7 @@ class SimpleFragment : Fragment() {
         val rootView = inflater.inflate(R.layout.fragment_simple, container, false)
 
 
-        radio_group.setOnCheckedChangeListener { _, checkedId ->
+        rootView.radio_group.setOnCheckedChangeListener { _, checkedId ->
             val radioButton: View = radio_group.findViewById(checkedId)
             val childIndex = radio_group.indexOfChild(radioButton)
             val textView = rootView.tv_fragment_header
