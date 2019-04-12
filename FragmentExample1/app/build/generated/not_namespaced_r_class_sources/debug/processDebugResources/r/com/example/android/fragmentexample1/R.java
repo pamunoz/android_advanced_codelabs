@@ -3765,13 +3765,14 @@ public final class R {
     public static final int top=0x7f0700c0;
     public static final int topPanel=0x7f0700c1;
     public static final int tv_fragment_header=0x7f0700c2;
-    public static final int unchecked=0x7f0700c3;
-    public static final int uniform=0x7f0700c4;
-    public static final int up=0x7f0700c5;
-    public static final int useLogo=0x7f0700c6;
-    public static final int withText=0x7f0700c7;
-    public static final int wrap=0x7f0700c8;
-    public static final int wrap_content=0x7f0700c9;
+    public static final int tv_rating_label=0x7f0700c3;
+    public static final int unchecked=0x7f0700c4;
+    public static final int uniform=0x7f0700c5;
+    public static final int up=0x7f0700c6;
+    public static final int useLogo=0x7f0700c7;
+    public static final int withText=0x7f0700c8;
+    public static final int wrap=0x7f0700c9;
+    public static final int wrap_content=0x7f0700ca;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f080000;

@@ -893,6 +893,7 @@ id title_template
 id top
 id topPanel
 id tv_fragment_header
+id tv_rating_label
 id unchecked
 id uniform
 id up

@@ -31,6 +31,7 @@
     <string name="yes_message">ARTICLE: Like</string>
     <string name="no_message">ARTICLE: Thanks</string>
     <string name="question_article">LIKE THE ARTICLE?</string>
+    <string name="question_song">LIKE THE SONG?</string>
 
     <!-- Text for the button in FragmentExample2. -->
     <string name="open">Open</string>
