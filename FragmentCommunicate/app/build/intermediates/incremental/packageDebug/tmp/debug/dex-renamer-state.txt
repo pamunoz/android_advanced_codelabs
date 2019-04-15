@@ -1,0 +1,4 @@
+#Mon Apr 15 07:26:07 CLST 2019
+base.0=D\:\\pablo\\work\\android\\android-advanced-codelabs\\FragmentCommunicate\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+path.0=classes.dex
+renamed.0=classes.dex
