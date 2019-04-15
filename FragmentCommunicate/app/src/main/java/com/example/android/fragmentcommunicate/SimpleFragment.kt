@@ -20,6 +20,7 @@ class SimpleFragment : Fragment() {
     companion object {
         const val YES = 0
         const val NO = 1
+        const val NONE = 2
 
         val newInstance = SimpleFragment()
     }
