@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity(), SimpleFragment.OnFragmentInteractionLi
     private fun closeFragment() {
         // Check to see if the fragment is already showing.
         val simpleFragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as SimpleFragment
-        simpleFragment?.let { supportFragmentManager.beginTransaction().remove(it).commit() }
+        simpleFragment.let { supportFragmentManager.beginTransaction().remove(it).commit() }
         // Update the Button text.
         btn_open.text = getString(R.string.open)
         // Set boolean flag to indicate fragment is closed.
