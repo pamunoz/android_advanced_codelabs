@@ -19,12 +19,13 @@ import java.lang.ClassCastException
  */
 class SimpleFragment : Fragment() {
 
-    val mRadioButtonChoice = NONE
-    private var mListener: OnFragmentInteractionalListener? = null
+    private var mRadioButtonChoice = NONE
+    private var mListener: OnFragmentInteractionListener? = null
+    interface OnFragmentInteractionListener{ fun onRadioButtonChoice(choice: Int) }
 
     companion object {
 
-        interface OnFragmentInteractionalListener { fun onRadioButtonChoice(choice: Int) }
+        
         const val YES = 0
         const val NO = 1
         const val NONE = 2
@@ -43,8 +44,20 @@ class SimpleFragment : Fragment() {
             val childIndex = radio_group.indexOfChild(radioButton)
             val textView = rootView.tv_fragment_header
             when(childIndex) {
-                YES -> textView.text = getString(R.string.yes_message)
-                NO -> textView.text = getString(R.string.no_message)
+                YES -> {
+                    textView.text = getString(R.string.yes_message)
+                    mRadioButtonChoice = YES
+                    mListener?.onRadioButtonChoice(YES)
+                }
+                NO -> {
+                    textView.text = getString(R.string.no_message)
+                    mRadioButtonChoice = NO
+                    mListener?.onRadioButtonChoice(NO)
+                }
+                else -> {
+                    mRadioButtonChoice = NONE
+                    mListener?.onRadioButtonChoice(NONE)
+                }
             }
         }
 
@@ -57,7 +70,7 @@ class SimpleFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is OnFragmentInteractionalListener) {
+        if (context is OnFragmentInteractionListener) {
             mListener = context
         } else {
             throw ClassCastException(context.toString() + resources.getString(R.string.exception_message))
