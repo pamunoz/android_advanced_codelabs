@@ -1,6 +1,7 @@
 package com.example.android.fragmentcommunicate
 
 
+import android.content.Context
 import android.os.Bundle
 
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_simple.*
 import kotlinx.android.synthetic.main.fragment_simple.view.*
+import java.lang.ClassCastException
 
 /**
  * A simple [Fragment] subclass.
@@ -18,7 +20,7 @@ import kotlinx.android.synthetic.main.fragment_simple.view.*
 class SimpleFragment : Fragment() {
 
     val mRadioButtonChoice = NONE
-    val mListener: OnFragmentInteractionalListener? = null
+    private var mListener: OnFragmentInteractionalListener? = null
 
     companion object {
 
@@ -53,5 +55,12 @@ class SimpleFragment : Fragment() {
         return rootView
     }
 
-
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnFragmentInteractionalListener) {
+            mListener = context
+        } else {
+            throw ClassCastException(context.toString() + resources.getString(R.string.exception_message))
+        }
+    }
 }
