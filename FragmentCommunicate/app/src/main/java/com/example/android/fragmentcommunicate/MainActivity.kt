@@ -18,11 +18,14 @@ package com.example.android.fragmentcommunicate
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), SimpleFragment.OnFragmentInteractionListener {
+
 
     private var isDisplayed = false
+    private var mRadioButtonChoice = 2
 
     companion object {
         const val STATE_FRAGMENT = "state_of_fragment"
@@ -67,6 +70,12 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putBoolean(STATE_FRAGMENT, isDisplayed)
         super.onSaveInstanceState(outState)
+    }
+
+    override fun onRadioButtonChoice(choice: Int) {
+        // Keep the radio button choice to pass it back to the fragment.
+        mRadioButtonChoice = choice
+        Toast.makeText(this, "Choice is " + Integer.toString(choice), Toast.LENGTH_SHORT).show();
     }
 
 }
