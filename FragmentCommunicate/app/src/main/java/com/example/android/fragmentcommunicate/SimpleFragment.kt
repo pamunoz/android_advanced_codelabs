@@ -17,6 +17,8 @@ import kotlinx.android.synthetic.main.fragment_simple.view.*
  */
 class SimpleFragment : Fragment() {
 
+    val mRadioButtonChoice = NONE
+
     companion object {
         const val YES = 0
         const val NO = 1
