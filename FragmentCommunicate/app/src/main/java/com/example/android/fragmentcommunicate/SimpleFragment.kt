@@ -20,6 +20,8 @@ class SimpleFragment : Fragment() {
     val mRadioButtonChoice = NONE
 
     companion object {
+
+        interface OnFragmentInteractionalListener { fun onRadioButtonChoice(choice: Int) }
         const val YES = 0
         const val NO = 1
         const val NONE = 2
