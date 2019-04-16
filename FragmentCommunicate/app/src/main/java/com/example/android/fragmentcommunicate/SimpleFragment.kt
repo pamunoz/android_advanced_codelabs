@@ -22,10 +22,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioGroup
-import android.widget.TextView
 import kotlinx.android.synthetic.main.fragment_simple.view.*
-import java.lang.ClassCastException
 
 /**
  * A simple [Fragment] subclass that shows a question
@@ -82,6 +79,11 @@ class SimpleFragment : Fragment() {
             is OnFragmentInteractionListener -> mListener = context
             else -> throw ClassCastException("$context ${resources.getString(R.string.exception_message)}")
         }
+    }
+
+    private fun setShoice(choice: Int) {
+        mRadioButtonChoice = choice
+        mListener?.onRadioButtonChoice(choice)
     }
 
     companion object {
