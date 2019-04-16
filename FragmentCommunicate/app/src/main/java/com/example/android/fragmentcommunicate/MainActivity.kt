@@ -22,7 +22,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), SimpleFragment.OnFragmentInteractionListener {
     override fun onRadioButtonChoice(choice: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        // Keep the radio button choice to pass it back to the fragment.
+        mRadioButtonChoice = choice
+        toast("Choice is $choice")
     }
 
     private var isFragmentDisplayed = false

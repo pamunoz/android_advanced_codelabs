@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56b71234-e403-47d5-a06c-bc3198752b5b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/MainActivity.kt" afterDir="false" />
-    </list>
+    <list default="true" id="56b71234-e403-47d5-a06c-bc3198752b5b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +34,7 @@
         <counts>
           <entry key="gradle" value="2" />
           <entry key="java" value="2" />
+          <entry key="kt" value="1" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
@@ -43,20 +42,21 @@
         <counts>
           <entry key="Groovy" value="2" />
           <entry key="JAVA" value="2" />
+          <entry key="Kotlin" value="1" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="25" />
-          <entry key="kt" value="392" />
+          <entry key="kt" value="559" />
           <entry key="xml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="25" />
-          <entry key="Kotlin" value="392" />
+          <entry key="Kotlin" value="559" />
           <entry key="XML" value="12" />
         </counts>
       </usages-collector>
@@ -73,13 +73,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="107" />
+            <state relative-caret-position="238">
+              <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
               <folding>
                 <element signature="e#649#775#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/ExtApp.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+              <folding>
+                <element signature="e#49#107#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,6 +128,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -2491,6 +2510,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/SimpleFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/ExtApp.kt" />
       </list>
     </option>
   </component>
@@ -2694,10 +2714,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="107" />
+        <state relative-caret-position="238">
+          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
           <folding>
             <element signature="e#649#775#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/ExtApp.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="e#49#107#0" expanded="true" />
           </folding>
         </state>
       </provider>
