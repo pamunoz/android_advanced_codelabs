@@ -62,15 +62,15 @@ class SimpleFragment : Fragment() {
                 YES // User chose "Yes".
                 -> {
                     rootView.fragment_header.text = getString(R.string.yes_message)
-                    setShoice(YES)
+                    setChoice(YES)
                 }
                 NO // User chose "No".
                 -> {
                     rootView.fragment_header.text = getString(R.string.no_message)
-                    setShoice(NO)
+                    setChoice(NO)
                 }
                 else // No choice made.
-                -> setShoice(NONE)
+                -> setChoice(NONE)
             }// Do nothing.
         }
 
@@ -86,7 +86,7 @@ class SimpleFragment : Fragment() {
         }
     }
 
-    private fun setShoice(choice: Int) {
+    private fun setChoice(choice: Int) {
         mRadioButtonChoice = choice
         mListener?.onRadioButtonChoice(choice)
     }
@@ -98,9 +98,10 @@ class SimpleFragment : Fragment() {
         private const val YES = 0
         private const val NO = 1
         private const val NONE = 2
+        private const val CHOICE = "choice"
 
-        fun newInstance(): SimpleFragment {
-            return SimpleFragment()
+        fun newInstance(choice: Int) = SimpleFragment().apply {
+            arguments = Bundle().apply { putInt(CHOICE, choice) }
         }
     }
 }// Required empty public constructor

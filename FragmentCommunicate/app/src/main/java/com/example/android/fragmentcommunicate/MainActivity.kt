@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity(), SimpleFragment.OnFragmentInteractionLi
      */
     private fun displayFragment() {
         // Instantiate the fragment.
-        val simpleFragment = SimpleFragment.newInstance()
+        val simpleFragment = SimpleFragment.newInstance(mRadioButtonChoice)
         // Get the FragmentManager and start a transaction.
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager
