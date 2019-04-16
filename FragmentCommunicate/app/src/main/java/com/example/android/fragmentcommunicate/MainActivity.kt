@@ -20,9 +20,13 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), SimpleFragment.OnFragmentInteractionListener {
+    override fun onRadioButtonChoice(choice: Int) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     private var isFragmentDisplayed = false
+    var mRadioButtonChoice = 2; // The default (no choice).
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
