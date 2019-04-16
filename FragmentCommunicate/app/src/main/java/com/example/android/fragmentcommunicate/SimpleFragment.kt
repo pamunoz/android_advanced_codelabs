@@ -33,6 +33,8 @@ import kotlinx.android.synthetic.main.fragment_simple.view.*
  */
 class SimpleFragment : Fragment() {
 
+    var mRadioButtonChoice = NONE
+
     /**
      * Creates the view for the fragment.
      *
