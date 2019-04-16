@@ -34,6 +34,7 @@ import kotlinx.android.synthetic.main.fragment_simple.view.*
 class SimpleFragment : Fragment() {
 
     var mRadioButtonChoice = NONE
+    var mListener: OnFragmentInteractionListener? = null
 
     interface OnFragmentInteractionListener {
         fun onRadioButtonChoice(choice: Int)
