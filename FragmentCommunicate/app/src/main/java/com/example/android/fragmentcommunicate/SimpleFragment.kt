@@ -50,10 +50,14 @@ class SimpleFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         // Inflate the layout for this fragment.
-        val rootView = inflater.inflate(R.layout.fragment_simple,
-                container, false)
-        //val radioGroup = rootView.findViewById<RadioGroup>(R.id.radio_group)
-
+        val rootView = inflater.inflate(R.layout.fragment_simple, container, false)
+        val choiceMade = this.arguments?.containsKey(CHOICE)
+        if (choiceMade != null) {
+            // A choice was made, so get the choice.
+            mRadioButtonChoice = this.arguments?.getInt(CHOICE)!!
+            // Check the radio button choice.
+            if (mRadioButtonChoice != NONE) rootView.radio_group.check(rootView.radio_group.getChildAt(mRadioButtonChoice).id)
+        }
         // Set the radioGroup onCheckedChanged listener.
         rootView.radio_group.setOnCheckedChangeListener { _, checkedId ->
             val radioButton = rootView.radio_group.findViewById<View>(checkedId)

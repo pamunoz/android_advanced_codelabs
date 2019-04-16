@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56b71234-e403-47d5-a06c-bc3198752b5b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/SimpleFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/SimpleFragment.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,14 +51,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="25" />
-          <entry key="kt" value="612" />
+          <entry key="kt" value="761" />
           <entry key="xml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="25" />
-          <entry key="Kotlin" value="612" />
+          <entry key="Kotlin" value="761" />
           <entry key="XML" value="12" />
         </counts>
       </usages-collector>
@@ -103,10 +102,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/SimpleFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
+            <state relative-caret-position="211">
+              <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
               <folding>
                 <element signature="e#649#894#0" expanded="true" />
+                <element signature="e#1940#2513#2" />
                 <element signature="e#2282#2313#0" expanded="true" />
                 <element signature="e#2404#2434#0" expanded="true" />
                 <element signature="e#3077#3124#0" expanded="true" />
@@ -2722,10 +2722,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/fragmentcommunicate/SimpleFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
+        <state relative-caret-position="211">
+          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
           <folding>
             <element signature="e#649#894#0" expanded="true" />
+            <element signature="e#1940#2513#2" />
             <element signature="e#2282#2313#0" expanded="true" />
             <element signature="e#2404#2434#0" expanded="true" />
             <element signature="e#3077#3124#0" expanded="true" />
