@@ -35,6 +35,10 @@ class SimpleFragment : Fragment() {
 
     var mRadioButtonChoice = NONE
 
+    interface OnFragmentInteractionListener {
+        fun onRadioButtonChoice(choice: Int)
+    }
+
     /**
      * Creates the view for the fragment.
      *
