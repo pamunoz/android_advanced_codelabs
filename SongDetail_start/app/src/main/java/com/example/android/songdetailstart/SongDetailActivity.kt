@@ -27,6 +27,7 @@ import android.view.View
 import android.widget.TextView
 
 import com.example.android.songdetailstart.content.SongUtils
+import kotlinx.android.synthetic.main.activity_song_detail.*
 
 /**
  * An activity representing a single song detail screen.
@@ -39,12 +40,11 @@ class SongDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_song_detail)
-        val toolbar = findViewById<View>(R.id.detail_toolbar) as Toolbar
-        setSupportActionBar(toolbar)
+        //val toolbar = findViewById<View>(R.id.detail_toolbar) as Toolbar
+        setSupportActionBar(detail_toolbar)
 
         // Show the Up button in the action bar.
-        val actionBar = supportActionBar
-        actionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // This activity displays the detail. In a real-world scenario,
         // get the data from a content repository.
