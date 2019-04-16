@@ -60,12 +60,17 @@ class SimpleFragment : Fragment() {
 
             when (rootView.radio_group.indexOfChild(radioButton)) {
                 YES // User chose "Yes".
-                -> rootView.fragment_header.text = getString(R.string.yes_message)
-                NO // User chose "No".
-                -> rootView.fragment_header.text = getString(R.string.no_message)
-                else // No choice made.
                 -> {
+                    rootView.fragment_header.text = getString(R.string.yes_message)
+                    setShoice(YES)
                 }
+                NO // User chose "No".
+                -> {
+                    rootView.fragment_header.text = getString(R.string.no_message)
+                    setShoice(NO)
+                }
+                else // No choice made.
+                -> setShoice(NONE)
             }// Do nothing.
         }
 
