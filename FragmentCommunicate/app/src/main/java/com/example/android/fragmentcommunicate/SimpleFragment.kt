@@ -19,18 +19,28 @@ import java.lang.ClassCastException
  */
 class SimpleFragment : Fragment() {
 
-    private var mRadioButtonChoice = NONE
+    var mRadioButtonChoice = NONE
     private var mListener: OnFragmentInteractionListener? = null
     interface OnFragmentInteractionListener{ fun onRadioButtonChoice(choice: Int) }
 
     companion object {
 
+
+        private const val CHOICE = "choice"
+
         
         const val YES = 0
         const val NO = 1
         const val NONE = 2
+        private var mRadioButtonChoice = NONE
 
-        val newInstance = SimpleFragment()
+        fun newInstance(choice: Int): SimpleFragment {
+            return SimpleFragment().apply {
+                arguments = Bundle().apply {
+                    putInt(CHOICE, choice)
+                }
+            }
+        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
