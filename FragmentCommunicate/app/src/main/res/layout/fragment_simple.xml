@@ -20,7 +20,7 @@
               android:layout_height="wrap_content"
               android:background="@color/my_fragment_color"
               android:orientation="horizontal"
-              tools:context="com.example.android.fragmentexample.SimpleFragment">
+              tools:context="com.example.android.fragmentcommunicate.SimpleFragment">
 
         <TextView
             android:id="@+id/fragment_header"
