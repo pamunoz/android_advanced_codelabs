@@ -16,6 +16,7 @@
 
 package com.example.android.fragmentcommunicate
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -24,6 +25,7 @@ import android.view.ViewGroup
 import android.widget.RadioGroup
 import android.widget.TextView
 import kotlinx.android.synthetic.main.fragment_simple.view.*
+import java.lang.ClassCastException
 
 /**
  * A simple [Fragment] subclass that shows a question
@@ -72,6 +74,14 @@ class SimpleFragment : Fragment() {
 
         // Return the View for the fragment's UI.
         return rootView
+    }
+
+    override fun onAttach(context: Context?) {
+        super.onAttach(context)
+        when(context) {
+            is OnFragmentInteractionListener -> mListener = context
+            else -> throw ClassCastException("$context ${resources.getString(R.string.exception_message)}")
+        }
     }
 
     companion object {
