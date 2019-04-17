@@ -35,6 +35,9 @@ import kotlinx.android.synthetic.main.song_list.*
  */
 class MainActivity : AppCompatActivity() {
 
+    /** To check if the screen is wide enough to show the song details */
+    var mTwoPane = false
+
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
      * device.
@@ -53,6 +56,8 @@ class MainActivity : AppCompatActivity() {
 
         // Get the song list as a RecyclerView.
         song_list.adapter = SimpleItemRecyclerViewAdapter(SongUtils.SONG_ITEMS)
+        // check if the view is available to show the two panel view
+        song_detail_container?.let { mTwoPane = true }
     }
 
     /**

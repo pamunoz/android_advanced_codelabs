@@ -28,8 +28,6 @@ import kotlinx.android.synthetic.main.activity_song_detail.*
  */
 class SongDetailActivity : AppCompatActivity() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_song_detail)
@@ -44,8 +42,6 @@ class SongDetailActivity : AppCompatActivity() {
         //mSong = SongUtils.SONG_ITEMS[rootView.intent.getIntExtra(SongUtils.SONG_ID_KEY, 0)]
         // Show the detail information in a TextView.
         //mSong?.let { rootView.song_detail.text = mSong!!.details }
-
-
     }
 
     /**
