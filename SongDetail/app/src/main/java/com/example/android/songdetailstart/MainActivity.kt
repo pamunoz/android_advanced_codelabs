@@ -88,15 +88,38 @@ class MainActivity : AppCompatActivity() {
          * @param position Position of the song in the array.
          */
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+
+
             holder.apply {
                 mItem = mValues[position]
                 mIdView.text = (position + 1).toString()
                 mContentView.text = mValues[position].song_title
                 mView.setOnClickListener { v ->
-                    val intent = Intent(v.context, SongDetailActivity::class.java).apply {
-                        putExtra(SongUtils.SONG_ID_KEY, holder.adapterPosition)
+                    /*  If mTwoPane is true, the code gets the selected song position (selectedSong)
+                     in the song title list, and passes it to the new instance of SongDetailFragment
+                     using the newInstance() method in the Fragment. It then uses
+                     getSupportFragmentManager() with a replace transaction to show a new version
+                     of the Fragment.
+                     The transaction code for managing a Fragment should be familiar, as you
+                     performed such operations in a previous lesson. By replacing the Fragment,
+                     you can refresh with new data a Fragment that is already running.
+                     If mTwoPane is false, the code does exactly the same thing it did in the
+                     starter app: it starts SongDetailActivity with an intent and SONG_ID_KEY and
+                     holder.getAdapterPosition() as extra data. */
+                    if (mTwoPane) {
+                        val selectedSong = holder.adapterPosition
+                        val fragment = SongDetailFragment.newInstance(selectedSong)
+                        supportFragmentManager.beginTransaction()
+                                .replace(R.id.song_detail_container, fragment)
+                                .addToBackStack(null)
+                                .commit()
+                    } else {
+                        val intent = Intent(v.context, SongDetailActivity::class.java).apply {
+                            putExtra(SongUtils.SONG_ID_KEY, holder.adapterPosition)
+                        }
+                        v.context.startActivity(intent)
                     }
-                    v.context.startActivity(intent)
                 }
             }
         }

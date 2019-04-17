@@ -28,14 +28,16 @@ class SongDetailFragment : Fragment() {
         return rootView
     }
 
-    /**
-     * This method receives the selectedSong (the integer position of the song title in the list),
-     * and creates the arguments Bundle with SONG_ID_KEY and selectedSong. It then uses
-     * setArguments(arguments) to set the arguments for the Fragment, and returns the Fragment.
-     */
-    fun newInstance(selectedSong: Int) = SongDetailFragment().apply {
-        arguments = Bundle().apply {
-            putInt(SongUtils.SONG_ID_KEY, selectedSong)
+    companion object {
+        /**
+         * This method receives the selectedSong (the integer position of the song title in the list),
+         * and creates the arguments Bundle with SONG_ID_KEY and selectedSong. It then uses
+         * setArguments(arguments) to set the arguments for the Fragment, and returns the Fragment.
+         */
+        fun newInstance(selectedSong: Int) = SongDetailFragment().apply {
+            arguments = Bundle().apply {
+                putInt(SongUtils.SONG_ID_KEY, selectedSong)
+            }
         }
     }
 
