@@ -30,8 +30,7 @@ import kotlinx.android.synthetic.main.song_detail.*
  */
 class SongDetailActivity : AppCompatActivity() {
 
-    // SongItem includes the song title and detail.
-    var mSong: SongUtils.Song? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
