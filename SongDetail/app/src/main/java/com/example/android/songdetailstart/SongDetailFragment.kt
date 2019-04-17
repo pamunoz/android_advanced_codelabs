@@ -22,7 +22,7 @@ class SongDetailFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.song_detail, container, false)
-        
+
         // Show the detail information in a TextView.
         mSong?.let { rootView.song_detail.text = mSong!!.details }
         return rootView

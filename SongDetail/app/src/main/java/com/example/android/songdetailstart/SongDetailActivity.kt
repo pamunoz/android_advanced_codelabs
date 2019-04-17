@@ -21,9 +21,7 @@ import android.os.Bundle
 import android.support.v4.app.NavUtils
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import com.example.android.songdetailstart.content.SongUtils
 import kotlinx.android.synthetic.main.activity_song_detail.*
-import kotlinx.android.synthetic.main.song_detail.*
 
 /**
  * An activity representing a single song detail screen.
@@ -44,6 +42,8 @@ class SongDetailActivity : AppCompatActivity() {
         // This activity displays the detail. In a real-world scenario,
         // get the data from a content repository.
         //mSong = SongUtils.SONG_ITEMS[rootView.intent.getIntExtra(SongUtils.SONG_ID_KEY, 0)]
+        // Show the detail information in a TextView.
+        //mSong?.let { rootView.song_detail.text = mSong!!.details }
 
 
     }
