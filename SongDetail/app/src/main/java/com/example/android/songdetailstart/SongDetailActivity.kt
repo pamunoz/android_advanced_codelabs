@@ -43,9 +43,9 @@ class SongDetailActivity : AppCompatActivity() {
 
         // This activity displays the detail. In a real-world scenario,
         // get the data from a content repository.
-        mSong = SongUtils.SONG_ITEMS[intent.getIntExtra(SongUtils.SONG_ID_KEY, 0)]
-        // Show the detail information in a TextView.
-        mSong?.let { song_detail.text = mSong!!.details }
+        //mSong = SongUtils.SONG_ITEMS[rootView.intent.getIntExtra(SongUtils.SONG_ID_KEY, 0)]
+
+
     }
 
     /**
