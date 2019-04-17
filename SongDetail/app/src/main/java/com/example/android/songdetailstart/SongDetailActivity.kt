@@ -21,6 +21,7 @@ import android.os.Bundle
 import android.support.v4.app.NavUtils
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import com.example.android.songdetailstart.content.SongUtils
 import kotlinx.android.synthetic.main.activity_song_detail.*
 
 /**
@@ -37,11 +38,20 @@ class SongDetailActivity : AppCompatActivity() {
         // Show the Up button in the action bar.
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // This activity displays the detail. In a real-world scenario,
-        // get the data from a content repository.
-        //mSong = SongUtils.SONG_ITEMS[rootView.intent.getIntExtra(SongUtils.SONG_ID_KEY, 0)]
-        // Show the detail information in a TextView.
-        //mSong?.let { rootView.song_detail.text = mSong!!.details }
+        /*
+        checks if savedInstanceState is null, which means the Activity started but
+        its state was not saved. If it is null, it creates an instance of the Fragment,
+        passing it the selectedSong. (If savedInstanceState is not null, the Activity state
+         has been saved—such as when the screen is rotated. In such cases,
+         you don't need to add the Fragment.)
+         */
+        if (savedInstanceState == null) {
+            val selectedSong = intent.getIntExtra(SongUtils.SONG_ID_KEY, 0)
+            val fragment = SongDetailFragment.newInstance(selectedSong)
+            supportFragmentManager.beginTransaction()
+                    .add(R.id.song_detail_container, fragment)
+                    .commit()
+        }
     }
 
     /**
