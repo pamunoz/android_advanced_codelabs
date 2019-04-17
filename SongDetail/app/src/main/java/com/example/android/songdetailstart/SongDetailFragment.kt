@@ -18,6 +18,14 @@ class SongDetailFragment : Fragment() {
     // SongItem includes the song title and detail.
     var mSong: SongUtils.Song? = null
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if (arguments?.containsKey(SongUtils.SONG_ID_KEY)!!) {
+            // Load the content specified by the fragment arguments.
+            mSong = arguments?.getInt(SongUtils.SONG_ID_KEY)?.let { SongUtils.SONG_ITEMS[it] }
+        }
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
