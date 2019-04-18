@@ -13,6 +13,21 @@
             android:layout_alignParentTop="true"
             style="@style/AppWidgetSection">
 
+        <TextView
+                android:id="@+id/appwidget_id_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/widget_id"
+                style="@style/AppWidgetLabel"/>
+        <TextView
+                android:id="@+id/appwidget_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/app_widget_text"
+                style="@style/AppWidgetText"/>
+
     </LinearLayout>
 
 </RelativeLayout>
