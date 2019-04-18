@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Sensor Survey</string>
+    <string name="placeholder">(placeholder)</string>
 </resources>
