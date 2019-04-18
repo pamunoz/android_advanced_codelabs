@@ -21,8 +21,8 @@ class NewAppWidget : AppWidgetProvider() {
 
     companion object {
 
-        const val mSharedPrefFile = "com.pfariasmunoz.appwidgetsample"
-        const val COUNT_KEY = "count"
+        private const val mSharedPrefFile = "com.pfariasmunoz.appwidgetsample"
+        private const val COUNT_KEY = "count"
 
         internal fun updateAppWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int) {
 

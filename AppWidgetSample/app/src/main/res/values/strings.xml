@@ -7,4 +7,5 @@
     <string name="app_widget_text">XX</string>
     <string name="last_updated">Last Updated</string>
     <string name="widget_update">%1$d @%2$s</string>
+    <string name="update_now">Update Now</string>
 </resources>
