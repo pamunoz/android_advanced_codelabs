@@ -5,4 +5,6 @@
     <string name="add_widget">Add widget</string>
     <string name="widget_id">Widget ID</string>
     <string name="app_widget_text">XX</string>
+    <string name="last_updated">Last Updated</string>
+    <string name="widget_update">%1$d @%2$s</string>
 </resources>
