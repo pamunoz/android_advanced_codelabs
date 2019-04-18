@@ -1,8 +1,10 @@
 package com.pfariasmunoz.appwidgetsample
 
+import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
+import android.content.Intent
 import android.widget.RemoteViews
 import java.text.DateFormat
 import java.util.*
@@ -35,6 +37,13 @@ class NewAppWidget : AppWidgetProvider() {
             val views = RemoteViews(context.packageName, R.layout.new_app_widget)
             views.setTextViewText(R.id.appwidget_update, context.resources.getString(R.string.widget_update, count, dateString))
             views.setTextViewText(R.id.appwidget_id, appWidgetId.toString())
+
+            val intentUpdate = Intent(context, NewAppWidget::class.java)
+            intentUpdate.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
+            val idArray = intArrayOf(appWidgetId)
+            intentUpdate.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, idArray)
+            val pendingUpdate = PendingIntent.getBroadcast(context, appWidgetId, intentUpdate, PendingIntent.FLAG_UPDATE_CURRENT)
+            views.setOnClickPendingIntent(R.id.btn_update, pendingUpdate)
 
             // Instruct the widget manager to update the widget
             appWidgetManager.updateAppWidget(appWidgetId, views)
