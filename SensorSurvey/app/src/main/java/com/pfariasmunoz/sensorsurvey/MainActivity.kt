@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     override fun onSensorChanged(event: SensorEvent?) {
         val sensorType = event?.sensor?.type
+        val sensorValue = event?.values?.get(0)
     }
 
 }
