@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onSensorChanged(event: SensorEvent?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val sensorType = event?.sensor?.type
     }
 
 }
