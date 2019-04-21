@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             Sensor.TYPE_LIGHT -> {
                 tv_label_light.text = resources.getString(R.string.label_light, currentValue)
             }
+            Sensor.TYPE_PROXIMITY -> tv_label_proximity.text = resources.getString(R.string.label_proximity, currentValue)
             else -> {}
         }
     }
