@@ -34,13 +34,18 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         sensorManager.unregisterListener(this)
     }
 
-    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) = Unit
 
     override fun onSensorChanged(event: SensorEvent?) {
         val sensorType = event?.sensor?.type
-        val sensorValue = event?.values?.get(0)
+        val currentValue = event?.values?.get(0)
+        when(sensorType) {
+            // Event came from the light sensor
+            Sensor.TYPE_LIGHT -> {
+                tv_label_light.text = resources.getString(R.string.label_light, currentValue)
+            }
+            else -> {}
+        }
     }
 
 }
