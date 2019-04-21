@@ -41,9 +41,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         val currentValue = event?.values?.get(0)
         when(sensorType) {
             // Event came from the light sensor
-            Sensor.TYPE_LIGHT -> {
-                tv_label_light.text = resources.getString(R.string.label_light, currentValue)
-            }
+            Sensor.TYPE_LIGHT -> tv_label_light.text = resources.getString(R.string.label_light, currentValue)
             Sensor.TYPE_PROXIMITY -> tv_label_proximity.text = resources.getString(R.string.label_proximity, currentValue)
             else -> {}
         }
