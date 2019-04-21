@@ -27,7 +27,11 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         sensorManager.proximity.let {
             sensorManager.registerListener(this, sensorManager.proximity, SensorManager.SENSOR_DELAY_NORMAL)
         }
+    }
 
+    override fun onStop() {
+        super.onStop()
+        sensorManager.unregisterListener(this)
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
