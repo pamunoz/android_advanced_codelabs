@@ -10,8 +10,8 @@ val Context.sensorManager: SensorManager
 val SensorManager.sensorList: List<Sensor>
     get() = this.getSensorList(Sensor.TYPE_ALL)
 
-val SensorManager.proximity: Sensor
+val SensorManager.proximity: Sensor?
     get() = this.getDefaultSensor(Sensor.TYPE_PROXIMITY)
 
-val SensorManager.light: Sensor
+val SensorManager.light: Sensor?
     get() = this.getDefaultSensor(Sensor.TYPE_LIGHT)
