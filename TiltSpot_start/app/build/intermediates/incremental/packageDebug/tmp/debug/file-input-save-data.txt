@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Apr 23 12:41:19 CLST 2019
+#Tue Apr 23 14:16:05 CLST 2019
 0.baseType=DIRECTORY
 0.base=D\:\\pablo\\work\\android\\android-advanced-codelabs\\TiltSpot_start\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 0.path=classes.dex

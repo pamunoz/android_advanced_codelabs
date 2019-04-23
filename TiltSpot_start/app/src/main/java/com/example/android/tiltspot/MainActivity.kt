@@ -25,6 +25,7 @@ import android.hardware.SensorManager
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Display
+import android.view.Surface
 import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -112,8 +113,22 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
          */
         var rotationMatrix = FloatArray(9)
         val rotationOk = SensorManager.getRotationMatrix(rotationMatrix, null, mAccelerometerData, mMagnetometerData)
+        var rotationMatrixAdjusted = FloatArray(9)
+        when(mDisplay?.rotation) {
+            Surface.ROTATION_0 -> rotationMatrixAdjusted = rotationMatrix.clone()
+            Surface.ROTATION_90 -> {
+                SensorManager.remapCoordinateSystem(rotationMatrix, SensorManager.AXIS_Y, SensorManager.AXIS_MINUS_X, rotationMatrixAdjusted)
+            }
+            Surface.ROTATION_180 -> {
+                SensorManager.remapCoordinateSystem(rotationMatrix, SensorManager.AXIS_MINUS_X, SensorManager.AXIS_MINUS_Y, rotationMatrixAdjusted)
+            }
+            Surface.ROTATION_270 -> {
+                SensorManager.remapCoordinateSystem(rotationMatrix, SensorManager.AXIS_MINUS_Y, SensorManager.AXIS_X, rotationMatrixAdjusted)
+            }
+        }
+
         val orientationValues = FloatArray(3)
-        if (rotationOk) SensorManager.getOrientation(rotationMatrix, orientationValues)
+        if (rotationOk) SensorManager.getOrientation(rotationMatrixAdjusted, orientationValues)
         /*
          The angles returned by the getOrientation() method describe how far the device is oriented
          or tilted with respect to the Earth's coordinate system. There are three components to orientation:
