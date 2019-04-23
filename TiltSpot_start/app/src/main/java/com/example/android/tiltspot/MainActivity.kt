@@ -25,6 +25,7 @@ import android.hardware.SensorManager
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Display
+import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), SensorEventListener {
@@ -57,6 +58,8 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         mSensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         mSensorAccelerometer = mSensorManager!!.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
         mSensorMagnetometer = mSensorManager!!.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)
+
+        val wm = getSystemService(WINDOW_SERVICE) as WindowManager
     }
 
     /**
