@@ -24,6 +24,7 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.Display
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), SensorEventListener {
@@ -44,16 +45,11 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private var mAccelerometerData = FloatArray(3)
     private var mMagnetometerData = FloatArray(3)
 
+    private val mDisplay: Display? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // Lock the orientation to portrait (for now)
-        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-
-//        mTextSensorAzimuth = findViewById<View>(R.id.value_azimuth)
-//        mTextSensorPitch = findViewById<View>(R.id.value_pitch)
-//        mTextSensorRoll = findViewById<View>(R.id.value_roll)
 
         // Get accelerometer and magnetometer sensors from the sensor manager.
         // The getDefaultSensor() method returns null if the sensor
