@@ -111,6 +111,8 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
          */
         var rotationMatrix = FloatArray(9)
         val rotationOk = SensorManager.getRotationMatrix(rotationMatrix, null, mAccelerometerData, mMagnetometerData)
+        val orientationValues = FloatArray(3)
+        if (rotationOk) SensorManager.getOrientation(rotationMatrix, orientationValues)
     }
 
     /**
