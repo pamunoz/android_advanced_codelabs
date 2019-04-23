@@ -136,6 +136,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         spot_bottom.alpha = 0.toFloat()
         spot_right.alpha = 0.toFloat()
         spot_left.alpha = 0.toFloat()
+
+        if (pitch > 0) spot_bottom.alpha = pitch else spot_top.alpha = Math.abs(pitch)
+        if (roll > 0) spot_left.alpha = roll else spot_right.alpha = Math.abs(roll)
     }
 
     /**
