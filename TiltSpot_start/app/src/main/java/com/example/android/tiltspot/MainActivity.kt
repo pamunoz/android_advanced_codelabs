@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private var mAccelerometerData = FloatArray(3)
     private var mMagnetometerData = FloatArray(3)
 
-    private val mDisplay: Display? = null
+    private var mDisplay: Display? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         mSensorMagnetometer = mSensorManager!!.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)
 
         val wm = getSystemService(WINDOW_SERVICE) as WindowManager
+        mDisplay = wm.defaultDisplay
     }
 
     /**
