@@ -113,6 +113,19 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         val rotationOk = SensorManager.getRotationMatrix(rotationMatrix, null, mAccelerometerData, mMagnetometerData)
         val orientationValues = FloatArray(3)
         if (rotationOk) SensorManager.getOrientation(rotationMatrix, orientationValues)
+        /*
+         The angles returned by the getOrientation() method describe how far the device is oriented
+         or tilted with respect to the Earth's coordinate system. There are three components to orientation:
+
+            Azimuth: The direction (north/south/east/west) the device is pointing. 0 is magnetic north.
+            Pitch: The top-to-bottom tilt of the device. 0 is flat.
+            Roll: The left-to-right tilt of the device. 0 is flat.
+
+         All three angles are measured in radians, and range from -π (-3.141) to π.
+         */
+        var azimuth = orientationValues[0]
+        var pitch = orientationValues[1]
+        var roll = orientationValues[2]
     }
 
     /**
