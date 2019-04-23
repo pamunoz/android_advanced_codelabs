@@ -37,9 +37,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private var mSensorMagnetometer: Sensor? = null
 
     // TextViews to display current sensor values.
-    private var mTextSensorAzimuth: TextView? = null
-    private var mTextSensorPitch: TextView? = null
-    private var mTextSensorRoll: TextView? = null
+//    private var mTextSensorAzimuth: TextView? = null
+//    private var mTextSensorPitch: TextView? = null
+//    private var mTextSensorRoll: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,19 +48,16 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         // Lock the orientation to portrait (for now)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
-        mTextSensorAzimuth = findViewById<View>(R.id.value_azimuth)
-        mTextSensorPitch = findViewById<View>(R.id.value_pitch)
-        mTextSensorRoll = findViewById<View>(R.id.value_roll)
+//        mTextSensorAzimuth = findViewById<View>(R.id.value_azimuth)
+//        mTextSensorPitch = findViewById<View>(R.id.value_pitch)
+//        mTextSensorRoll = findViewById<View>(R.id.value_roll)
 
         // Get accelerometer and magnetometer sensors from the sensor manager.
         // The getDefaultSensor() method returns null if the sensor
         // is not available on the device.
-        mSensorManager = getSystemService(
-                Context.SENSOR_SERVICE) as SensorManager
-        mSensorAccelerometer = mSensorManager!!.getDefaultSensor(
-                Sensor.TYPE_ACCELEROMETER)
-        mSensorMagnetometer = mSensorManager!!.getDefaultSensor(
-                Sensor.TYPE_MAGNETIC_FIELD)
+        mSensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        mSensorAccelerometer = mSensorManager!!.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+        mSensorMagnetometer = mSensorManager!!.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)
     }
 
     /**
