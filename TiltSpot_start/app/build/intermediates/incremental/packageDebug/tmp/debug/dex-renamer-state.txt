@@ -1,0 +1,4 @@
+#Tue Apr 23 14:16:05 CLST 2019
+base.0=D\:\\pablo\\work\\android\\android-advanced-codelabs\\TiltSpot_start\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+path.0=classes.dex
+renamed.0=classes.dex
