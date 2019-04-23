@@ -24,6 +24,7 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), SensorEventListener {
 
@@ -123,9 +124,12 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
          All three angles are measured in radians, and range from -π (-3.141) to π.
          */
-        var azimuth = orientationValues[0]
-        var pitch = orientationValues[1]
-        var roll = orientationValues[2]
+        val azimuth = orientationValues[0]
+        val pitch = orientationValues[1]
+        val roll = orientationValues[2]
+        value_azimuth.text = resources.getString(R.string.value_format, azimuth)
+        value_pitch.text = resources.getString(R.string.value_format, pitch)
+        value_roll.text = resources.getString(R.string.value_format, roll)
     }
 
     /**
