@@ -24,7 +24,6 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.TextView
 
 class MainActivity : AppCompatActivity(), SensorEventListener {
 
@@ -40,6 +39,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 //    private var mTextSensorAzimuth: TextView? = null
 //    private var mTextSensorPitch: TextView? = null
 //    private var mTextSensorRoll: TextView? = null
+
+    private val mAccelerometerData = FloatArray(3)
+    private val mMagnetometerData = FloatArray(3)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
