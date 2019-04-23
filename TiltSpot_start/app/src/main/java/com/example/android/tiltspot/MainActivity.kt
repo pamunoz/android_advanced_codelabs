@@ -104,6 +104,13 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             Sensor.TYPE_ACCELEROMETER -> { mAccelerometerData = sensorEvent.values.clone() }
             Sensor.TYPE_MAGNETIC_FIELD -> { mMagnetometerData = sensorEvent.values.clone() }
         }
+        /*
+        use the SensorManager.getRotationMatrix() method to generate a rotation matrix
+        from the raw accelerometer and magnetometer data. The matrix is used in the
+        next step to get the device orientation, which is what you're really interested in.
+         */
+        var rotationMatrix = FloatArray(9)
+        val rotationOk = SensorManager.getRotationMatrix(rotationMatrix, null, mAccelerometerData, mMagnetometerData)
     }
 
     /**
