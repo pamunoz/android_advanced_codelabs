@@ -40,8 +40,8 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 //    private var mTextSensorPitch: TextView? = null
 //    private var mTextSensorRoll: TextView? = null
 
-    private val mAccelerometerData = FloatArray(3)
-    private val mMagnetometerData = FloatArray(3)
+    private var mAccelerometerData = FloatArray(3)
+    private var mMagnetometerData = FloatArray(3)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,7 +93,18 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         mSensorManager!!.unregisterListener(this)
     }
 
-    override fun onSensorChanged(sensorEvent: SensorEvent) {}
+    override fun onSensorChanged(sensorEvent: SensorEvent) {
+        /*
+        You use the clone() method to explicitly make a copy of the data in the values array.
+        The SensorEvent object (and the array of values it contains) is reused across calls
+        to onSensorChanged(). Cloning those values prevents the data you're currently
+        interested in from being changed by more recent data before you're done with it.
+         */
+        when(sensorEvent.sensor.type) {
+            Sensor.TYPE_ACCELEROMETER -> { mAccelerometerData = sensorEvent.values.clone() }
+            Sensor.TYPE_MAGNETIC_FIELD -> { mMagnetometerData = sensorEvent.values.clone() }
+        }
+    }
 
     /**
      * Must be implemented to satisfy the SensorEventListener interface;
