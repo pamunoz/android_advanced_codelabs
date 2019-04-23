@@ -130,6 +130,12 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         value_azimuth.text = resources.getString(R.string.value_format, azimuth)
         value_pitch.text = resources.getString(R.string.value_format, pitch)
         value_roll.text = resources.getString(R.string.value_format, roll)
+
+        // Reset the alpha to sensor changes
+        spot_top.alpha = 0.toFloat()
+        spot_bottom.alpha = 0.toFloat()
+        spot_right.alpha = 0.toFloat()
+        spot_left.alpha = 0.toFloat()
     }
 
     /**
