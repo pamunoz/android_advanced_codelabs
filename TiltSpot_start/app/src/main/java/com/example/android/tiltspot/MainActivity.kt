@@ -124,9 +124,9 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
          All three angles are measured in radians, and range from -π (-3.141) to π.
          */
-        val azimuth = orientationValues[0]
-        val pitch = orientationValues[1]
-        val roll = orientationValues[2]
+        val azimuth = if (Math.abs(orientationValues[0]) < VALUE_DRIFT) 0.toFloat() else orientationValues[0]
+        val pitch = if (Math.abs(orientationValues[1]) < VALUE_DRIFT) 0.toFloat() else orientationValues[1]
+        val roll = if (Math.abs(orientationValues[2]) < VALUE_DRIFT) 0.toFloat() else orientationValues[2]
         value_azimuth.text = resources.getString(R.string.value_format, azimuth)
         value_pitch.text = resources.getString(R.string.value_format, pitch)
         value_roll.text = resources.getString(R.string.value_format, roll)
@@ -143,6 +143,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         // Very small values for the accelerometer (on all three axes) should
         // be interpreted as 0. This value is the amount of acceptable
         // non-zero drift.
-        private val VALUE_DRIFT = 0.05f
+        private const val VALUE_DRIFT = 0.05f
     }
 }
