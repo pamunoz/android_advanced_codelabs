@@ -1,0 +1,4 @@
+#Tue Apr 23 17:41:15 CLST 2019
+base.0=D\:\\pablo\\work\\android\\android-advanced-codelabs\\RecyclerView_start\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
