@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Put initial data into the word list.
-        for (i in 0..19) {
+        for (i in 0..199) {
             mWordList.addLast("Word $i")
         }
         // Create an adapter and supply the data to be displayed.
