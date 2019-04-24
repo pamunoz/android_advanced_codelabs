@@ -20,6 +20,12 @@ class MainActivity : AppCompatActivity() {
                 1
             }
             1 -> {
+                try {
+                    Thread.sleep(32) // two refreshes
+                } catch (e: InterruptedException) {
+                    e.printStackTrace()
+                }
+
                 view.setBackgroundResource(R.drawable.ankylo)
                 2
             }
