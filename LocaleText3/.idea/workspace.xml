@@ -8,9 +8,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1e02fed-0d81-4284-913a-adf9172955ef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/localetext/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/localetext/MainActivity.kt" afterDir="false" />
-    </list>
+    <list default="true" id="a1e02fed-0d81-4284-913a-adf9172955ef" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +32,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/localetext/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+            <state relative-caret-position="425">
+              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding>
                 <element signature="e#0#599#0" expanded="true" />
-                <element signature="e#641#1184#0" expanded="true" />
                 <element signature="e#4316#4348#0" expanded="true" />
                 <element signature="e#4006#4047#0" />
                 <element signature="e#4075#4245#0" />
@@ -278,11 +275,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/localetext/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+        <state relative-caret-position="425">
+          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
           <folding>
             <element signature="e#0#599#0" expanded="true" />
-            <element signature="e#641#1184#0" expanded="true" />
             <element signature="e#4316#4348#0" expanded="true" />
             <element signature="e#4006#4047#0" />
             <element signature="e#4075#4245#0" />
