@@ -86,9 +86,8 @@ class MainActivity : AppCompatActivity() {
         date.text = formattedDate
 
         // DONE: Apply the exchange rate and calculate the price.
-        setupThePriceAndCurrencyFormat()
-
-        // TODO: Show the price string.
+        // DONE: Show the price string.
+        price.text = thePriceAndCurrencyFormat()
 
         // Get the EditText view for the entered quantity.
         //val enteredQuantity = findViewById<View>(R.id.) as EditText
@@ -132,7 +131,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setupThePriceAndCurrencyFormat() {
+    private fun thePriceAndCurrencyFormat(): String {
         val myFormattedPrice: String
         val deviceLocale = Locale.getDefault().country
         // If country code is France or Israel, calculate price
@@ -154,6 +153,7 @@ class MainActivity : AppCompatActivity() {
             mCurrencyFormat = NumberFormat.getCurrencyInstance(Locale.US)
             myFormattedPrice = mCurrencyFormat.format(mPrice)
         }
+        return myFormattedPrice
     }
 
     /**
