@@ -18,6 +18,7 @@ package com.example.android.localetext
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
@@ -74,14 +75,17 @@ class MainActivity : AppCompatActivity() {
      * @param item      Menu item
      * @return boolean  True if menu item is selected.
      */
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle options menu item clicks here.
-        val id = item.itemId
-        if (id == R.id.action_help) {
+    override fun onOptionsItemSelected(item: MenuItem) = when(item.itemId) {
+        R.id.action_help -> {
             val intent = Intent(this, HelpActivity::class.java)
             startActivity(intent)
-            return true
+            true
         }
-        return super.onOptionsItemSelected(item)
+        R.id.action_language -> {
+            val languageIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
+            startActivity(languageIntent)
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
     }
 }

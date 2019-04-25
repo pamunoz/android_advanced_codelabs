@@ -1045,6 +1045,7 @@ id action_context_bar
 id action_divider
 id action_help
 id action_image
+id action_language
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -1353,6 +1354,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_help
+string action_language
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
