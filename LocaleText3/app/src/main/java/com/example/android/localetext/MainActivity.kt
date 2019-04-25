@@ -30,6 +30,7 @@ import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import java.text.DateFormat
+import java.text.NumberFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 
@@ -43,6 +44,8 @@ class MainActivity : AppCompatActivity() {
     private val mInputQuantity = 1
 
     // TODO: Get the number format for this locale.
+    private val mNumberFormat = NumberFormat.getInstance()
+    private val TAG = MainActivity::class.java.simpleName
 
     // Fixed price in U.S. dollars and cents: ten cents.
     private val mPrice = 0.10
