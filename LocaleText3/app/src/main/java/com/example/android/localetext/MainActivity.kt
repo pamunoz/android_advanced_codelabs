@@ -53,8 +53,8 @@ class MainActivity : AppCompatActivity() {
     private var mPrice = 0.10
 
     // Exchange rates for France (FR) and Israel (IW).
-    internal var mFrExchangeRate = 0.93 // 0.93 euros = $1.
-    internal var mIwExchangeRate = 3.61 // 3.61 new shekels = $1.
+    private var mFrExchangeRate = 0.93 // 0.93 euros = $1.
+    private var mIwExchangeRate = 3.61 // 3.61 new shekels = $1.
 
     // DONE: Get locale's currency.
     private var mCurrencyFormat = NumberFormat.getCurrencyInstance()
