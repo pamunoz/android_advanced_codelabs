@@ -1,0 +1,4 @@
+#Thu Apr 25 14:20:44 CLST 2019
+base.0=D\:\\pablo\\work\\android\\android-advanced-codelabs\\LocaleText\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
+path.0=classes.dex
+renamed.0=classes.dex
