@@ -50,14 +50,14 @@ class MainActivity : AppCompatActivity() {
     private val TAG = MainActivity::class.java.simpleName
 
     // Fixed price in U.S. dollars and cents: ten cents.
-    private val mPrice = 0.10
+    private var mPrice = 0.10
 
     // Exchange rates for France (FR) and Israel (IW).
     internal var mFrExchangeRate = 0.93 // 0.93 euros = $1.
     internal var mIwExchangeRate = 3.61 // 3.61 new shekels = $1.
 
     // DONE: Get locale's currency.
-    private val mCurrencyFormat = NumberFormat.getCurrencyInstance()
+    private var mCurrencyFormat = NumberFormat.getCurrencyInstance()
 
     /**
      * Creates the view with a toolbar for the options menu
@@ -85,7 +85,8 @@ class MainActivity : AppCompatActivity() {
         // Display the formatted date
         date.text = formattedDate
 
-        // TODO: Apply the exchange rate and calculate the price.
+        // DONE: Apply the exchange rate and calculate the price.
+        setupThePriceAndCurrencyFormat()
 
         // TODO: Show the price string.
 
@@ -128,6 +129,30 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             false
+        }
+    }
+
+    private fun setupThePriceAndCurrencyFormat() {
+        val myFormattedPrice: String
+        val deviceLocale = Locale.getDefault().country
+        // If country code is France or Israel, calculate price
+        // with exchange rate and change to the country's currency format
+        if ((deviceLocale == "FR") or (deviceLocale == "IL")) {
+            if (deviceLocale == "FR") {
+                // Calculate mPrice in euros.
+                mPrice *= mFrExchangeRate
+            } else {
+                // Calculate mPrice in new shekels.
+                mPrice *= mIwExchangeRate
+            }
+            // Use the user-chosen locale's currency format, which
+            // is either France or Israel.
+            myFormattedPrice = mCurrencyFormat.format(mPrice)
+        } else {
+            // mPrice is the same (based on U.S. dollar).
+            // Use the currency format for the U.S.
+            mCurrencyFormat = NumberFormat.getCurrencyInstance(Locale.US)
+            myFormattedPrice = mCurrencyFormat.format(mPrice)
         }
     }
 
