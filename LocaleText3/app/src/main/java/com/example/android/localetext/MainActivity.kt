@@ -105,6 +105,7 @@ class MainActivity : AppCompatActivity() {
                     try {
                         // Use the number format for the locale
                         mInputQuantity = mNumberFormat.parse(v.text.toString()).toInt()
+                        v.error = null
                     } catch (e: ParseException) {
                         e.printStackTrace()
                     }
