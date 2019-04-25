@@ -29,6 +29,7 @@ import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import java.text.DateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 
@@ -73,7 +74,10 @@ class MainActivity : AppCompatActivity() {
         // Set the expiration date as the date to display.
         myDate.time = expirationDate
 
-        // TODO: Format the date for the locale.
+        // DONE: Format the date for the locale.
+        val formattedDate = DateFormat.getDateInstance().format(myDate)
+        // Display the formatted date
+        date.text = formattedDate
 
         // TODO: Apply the exchange rate and calculate the price.
 
