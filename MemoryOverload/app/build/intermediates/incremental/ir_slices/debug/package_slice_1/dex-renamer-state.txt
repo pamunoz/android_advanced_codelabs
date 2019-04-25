@@ -1,0 +1,4 @@
+#Thu Apr 25 13:45:34 CLST 2019
+base.0=D\:\\pablo\\work\\android\\android-advanced-codelabs\\MemoryOverload\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+path.0=classes.dex
+renamed.0=classes.dex
