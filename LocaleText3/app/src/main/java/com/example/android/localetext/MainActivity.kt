@@ -31,6 +31,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import java.text.DateFormat
 import java.text.NumberFormat
+import java.text.ParseException
 import java.util.*
 import java.util.concurrent.TimeUnit
 
@@ -41,7 +42,7 @@ import java.util.concurrent.TimeUnit
 class MainActivity : AppCompatActivity() {
 
     // Default quantity is 1.
-    private val mInputQuantity = 1
+    private var mInputQuantity = 1
 
     // TODO: Get the number format for this locale.
     private val mNumberFormat = NumberFormat.getInstance()
@@ -100,7 +101,13 @@ class MainActivity : AppCompatActivity() {
                     // Don't format, leave alone.
                 } else {
 
-                    // TODO: Parse string in view v to a number.
+                    // DONE: Parse string in view v to a number.
+                    try {
+                        // Use the number format for the locale
+                        mInputQuantity = mNumberFormat.parse(v.text.toString()).toInt()
+                    } catch (e: ParseException) {
+                        e.printStackTrace()
+                    }
 
                     // TODO: Convert to string using locale's number format.
 
