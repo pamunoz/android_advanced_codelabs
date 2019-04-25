@@ -112,8 +112,10 @@ class MainActivity : AppCompatActivity() {
                         v.error = getText(R.string.enter_a_number)
                         false
                     }
-
                     // TODO: Convert to string using locale's number format.
+                    val formattedQuantity = mNumberFormat.format(mInputQuantity)
+                    // Show the locale-formatted quantity.
+                    v.text = formattedQuantity
 
                     // TODO: Homework: Calculate the total amount from price and quantity.
 
