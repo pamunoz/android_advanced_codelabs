@@ -23,6 +23,7 @@ import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
+import kotlinx.android.synthetic.main.activity_help.*
 
 /**
  * Help screen that provides a floating action button
@@ -39,7 +40,6 @@ class HelpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_help)
 
-        val fab = findViewById<View>(R.id.fab) as FloatingActionButton
         fab.setOnClickListener {
             val phoneNumber = getString(R.string.support_phone)
             callSupportCenter(phoneNumber)

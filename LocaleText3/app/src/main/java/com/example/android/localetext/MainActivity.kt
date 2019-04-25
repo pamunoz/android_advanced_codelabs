@@ -20,20 +20,16 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
-import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
-import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
-import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
-
-import java.util.Date
+import java.util.*
 import java.util.concurrent.TimeUnit
 
 /**
@@ -68,7 +64,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
-        val fab = findViewById<View>(R.id.fab) as FloatingActionButton
         fab.setOnClickListener { showHelp() }
 
         // Get the current date.
@@ -130,7 +125,7 @@ class MainActivity : AppCompatActivity() {
      */
     override fun onResume() {
         super.onResume()
-        (findViewById<View>(R.id.quantity) as EditText).text.clear()
+        quantity.text.clear()
     }
 
     /**
