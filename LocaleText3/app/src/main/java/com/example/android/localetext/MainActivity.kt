@@ -22,6 +22,7 @@ import android.os.Bundle
 import android.provider.Settings
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -107,7 +108,9 @@ class MainActivity : AppCompatActivity() {
                         mInputQuantity = mNumberFormat.parse(v.text.toString()).toInt()
                         v.error = null
                     } catch (e: ParseException) {
-                        e.printStackTrace()
+                        Log.e(TAG, Log.getStackTraceString(e))
+                        v.error = getText(R.string.enter_a_number)
+                        false
                     }
 
                     // TODO: Convert to string using locale's number format.
