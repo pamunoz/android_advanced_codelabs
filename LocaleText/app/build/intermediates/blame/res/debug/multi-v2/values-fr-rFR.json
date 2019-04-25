@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\pablo\\work\\android\\android-advanced-codelabs\\LocaleText\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fr-rFR\\values-fr-rFR.xml",
+            "map": [
+                {
+                    "source": "D:\\pablo\\work\\android\\android-advanced-codelabs\\LocaleText\\app\\src\\main\\res\\values-fr-rFR\\strings.xml",
+                    "from": {
+                        "startLines": "3,7,2,4,5,6",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "106,669,57,157,503,610",
+                        "endColumns": "49,53,47,344,105,57",
+                        "endOffsets": "151,718,100,497,604,663"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,105,159,207,552,658",
+                        "endColumns": "49,53,47,344,105,57",
+                        "endOffsets": "100,154,202,547,653,711"
+                    }
+                }
+            ]
+        }
+    ]
+}
