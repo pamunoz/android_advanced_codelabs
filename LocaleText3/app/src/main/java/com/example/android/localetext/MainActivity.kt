@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     // Default quantity is 1.
     private var mInputQuantity = 1
 
-    // TODO: Get the number format for this locale.
+    // DONE: Get the number format for this locale.
     private val mNumberFormat = NumberFormat.getInstance()
     private val TAG = MainActivity::class.java.simpleName
 
@@ -56,7 +56,8 @@ class MainActivity : AppCompatActivity() {
     internal var mFrExchangeRate = 0.93 // 0.93 euros = $1.
     internal var mIwExchangeRate = 3.61 // 3.61 new shekels = $1.
 
-    // TODO: Get locale's currency.
+    // DONE: Get locale's currency.
+    private val mCurrencyFormat = NumberFormat.getCurrencyInstance()
 
     /**
      * Creates the view with a toolbar for the options menu

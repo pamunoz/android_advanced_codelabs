@@ -2,7 +2,9 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <locale>fr</locale>
+      </config>
     </shared>
   </component>
   <component name="ChangeListManager">
@@ -32,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/localetext/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="114" column="76" lean-forward="true" selection-start-line="114" selection-start-column="76" selection-end-line="114" selection-end-column="76" />
+            <state relative-caret-position="435">
+              <caret line="59" column="68" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="68" />
               <folding>
                 <element signature="e#0#599#0" expanded="true" />
                 <element signature="e#641#1184#0" expanded="true" />
@@ -41,6 +43,16 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="138" column="25" selection-start-line="138" selection-start-column="25" selection-end-line="138" selection-end-column="25" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -72,7 +84,28 @@
     <panes>
       <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LocaleText3" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="LocaleText3" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="LocaleText3" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -176,7 +209,7 @@
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" weight="0.35667396" />
+      <window_info content_ui="combo" id="Project" visible="true" weight="0.032822758" />
       <window_info id="Structure" side_tool="true" />
       <window_info id="Build Variants" side_tool="true" />
       <window_info id="Image Layers" />
@@ -199,7 +232,7 @@
       <window_info anchor="right" id="Gradle" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Preview" weight="0.32995737" />
+      <window_info anchor="right" id="Preview" weight="0.32932165" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -228,20 +261,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="138" column="25" selection-start-line="138" selection-start-column="25" selection-end-line="138" selection-end-column="25" />
-          <folding>
-            <element signature="e#7446#7474#0" expanded="true" />
-          </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/localetext/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="114" column="76" lean-forward="true" selection-start-line="114" selection-start-column="76" selection-end-line="114" selection-end-column="76" />
+        <state relative-caret-position="435">
+          <caret line="59" column="68" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="68" />
           <folding>
             <element signature="e#0#599#0" expanded="true" />
             <element signature="e#641#1184#0" expanded="true" />
