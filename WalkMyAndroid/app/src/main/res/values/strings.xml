@@ -17,9 +17,7 @@
     <string name="app_name">Walk My Android</string>
     <string name="get_location">Start Tracking Location.</string>
     <string name="android_image">Android Image</string>
-    <string name="textview_hint">Press the button to get the last known
-        location
-    </string>
+    <string name="textview_hint">Press the button to start tracking your location</string>
     <string name="location_permission_denied">You are not granted permission to the fine location</string>
     <string name="location_text">"Latitude: %1$.4f \n Longitude: %2$.4f \n Timestamp: %3$tr"</string>
     <string name="no_location">No location</string>
