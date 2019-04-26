@@ -32,7 +32,11 @@ import java.io.IOException
 import java.util.*
 import kotlin.collections.ArrayList
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnTaskCompleted {
+    override fun onTaskCompleted(result: String) {
+        // Update the UI
+        textview_location.text = getString(R.string.address_text, result, System.currentTimeMillis())
+    }
 
     private var mLastLocation: Location? = null
     //private var mFusedLocationClient: FusedLocationProviderClient? = null
