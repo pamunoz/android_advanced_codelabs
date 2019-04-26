@@ -4,7 +4,7 @@
             "outputFile": "D:\\pablo\\work\\android\\android-advanced-codelabs\\WalkMyAndroid\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-2\\files-2.1\\feb3f2250bf2bac21e913af2fb8f9267\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\Cris\\.gradle\\caches\\transforms-2\\files-2.1\\bd8a5307155596ea25c63aa8d3b7078f\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

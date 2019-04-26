@@ -15,8 +15,10 @@
  */
 package com.example.android.walkmyandroid
 
+import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,5 +29,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        btn_get_location.setOnClickListener {
+            accessFineLocation(REQUEST_LOCATION_PERMISSION)
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        when(requestCode) {
+            REQUEST_LOCATION_PERMISSION -> {
+                // If the permission is granted, get the location,
+                // otherwise, show a Toast
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    accessFineLocation(REQUEST_LOCATION_PERMISSION)
+                } else {
+                    toast(R.string.location_permission_denied)
+                }
+            }
+            else -> super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        }
     }
 }

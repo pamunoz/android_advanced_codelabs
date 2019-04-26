@@ -2,47 +2,29 @@
 <instant-run
     abi="x86"
     api-level="29"
-    build-mode="FULL"
+    build-mode="COLD"
     density="560dpi"
     format="10"
     plugin-version="3.4.0"
-    timestamp="1556287528550"
+    timestamp="1556293402622"
     token="5895578223188052496"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="CLASS_ADDED" >
 
     <task
         name="javac"
-        duration="652" />
+        duration="249" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="127" />
+        duration="34" />
     <task
         name="verifier"
-        duration="304" />
+        duration="9" />
 
     <artifact
         location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
         type="SPLIT" />
     <artifact
         location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
@@ -50,23 +32,12 @@
     <artifact
         location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
         type="SPLIT" />
-    <artifact
-        location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1556287528550"
-        verifier="FULL_BUILD_REQUESTED" >
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1556293159405"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
@@ -74,16 +45,16 @@
             location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
             location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
             location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
@@ -92,10 +63,10 @@
             location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
             location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
@@ -106,6 +77,20 @@
         <artifact
             location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1556293402622"
+        verifier="CLASS_ADDED" >
+        <artifact
+            location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>
