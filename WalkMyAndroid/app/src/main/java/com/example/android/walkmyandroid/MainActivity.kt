@@ -39,6 +39,7 @@ import kotlin.collections.ArrayList
 class MainActivity : AppCompatActivity(), OnTaskCompleted {
 
     var mRotateAnim: AnimatorSet
+    var mTrackingLocation = false
 
     init {
         mRotateAnim = AnimatorInflater.loadAnimator(this, R.animator.rotate) as AnimatorSet
