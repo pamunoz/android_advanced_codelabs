@@ -19,7 +19,6 @@ import android.Manifest
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Address
@@ -29,7 +28,6 @@ import android.os.AsyncTask
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
-import android.view.animation.AnimationSet
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.LocationServices
@@ -63,18 +61,18 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
         mRotateAnim.setTarget(imageview_android)
 
         btn_get_location.setOnClickListener {
-            accessFineLocation(REQUEST_LOCATION_PERMISSION, this@MainActivity)
+            startTrackingLocation()
         }
     }
 
-    private fun accessFineLocation(requestCode: Int, listener: OnTaskCompleted) {
+    private fun startTrackingLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), requestCode)
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), REQUEST_LOCATION_PERMISSION)
         } else {
             logd("getLocation: permissions granted")
             LocationServices.getFusedLocationProviderClient(this)?.lastLocation?.addOnSuccessListener { location ->
                 // Start the reverse geocode AsyncTask
-                FetchAddressTask(this, listener).execute(location)
+                FetchAddressTask(this, this).execute(location)
             }
         }
         textview_location.text = getString(R.string.address_text, getString(R.string.loading), System.currentTimeMillis())
@@ -86,7 +84,7 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
                 // If the permission is granted, get the location,
                 // otherwise, show a Toast
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    accessFineLocation(REQUEST_LOCATION_PERMISSION, this@MainActivity)
+                    startTrackingLocation(REQUEST_LOCATION_PERMISSION, this@MainActivity)
                 } else {
                     toast(R.string.location_permission_denied)
                 }
