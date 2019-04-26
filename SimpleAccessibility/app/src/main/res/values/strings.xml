@@ -23,4 +23,6 @@ limitations under the License. -->
     <string name="checkbox_text_hyperspace">Enable hyperspace</string>
     <string name="cd_discard">Discard</string>
     <string name="cd_partly_cloudy">Partly Cloudy</string>
+    <string name="et_message">Enter your message</string>
+    <string name="ev_message_label">Message</string>
 </resources>
