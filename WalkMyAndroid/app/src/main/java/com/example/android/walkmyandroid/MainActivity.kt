@@ -16,6 +16,8 @@
 package com.example.android.walkmyandroid
 
 import android.Manifest
+import android.animation.AnimatorInflater
+import android.animation.AnimatorSet
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
@@ -27,6 +29,7 @@ import android.os.AsyncTask
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
+import android.view.animation.AnimationSet
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.LocationServices
@@ -36,6 +39,13 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(), OnTaskCompleted {
+
+    var mRotateAnim: AnimatorSet
+
+    init {
+        mRotateAnim = AnimatorInflater.loadAnimator(this, R.animator.rotate) as AnimatorSet
+    }
+
     override fun onTaskCompleted(result: String) {
         // Update the UI
         textview_location.text = getString(R.string.address_text, result, System.currentTimeMillis())
@@ -49,6 +59,8 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        mRotateAnim.setTarget(imageview_android)
 
         btn_get_location.setOnClickListener {
             accessFineLocation(REQUEST_LOCATION_PERMISSION, this@MainActivity)
