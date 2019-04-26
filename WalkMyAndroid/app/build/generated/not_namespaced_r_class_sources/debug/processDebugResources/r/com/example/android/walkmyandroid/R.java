@@ -3370,14 +3370,15 @@ public final class R {
     public static final int common_signin_button_text_long=0x7f0c003b;
     public static final int get_location=0x7f0c003c;
     public static final int invalid_lat_long_used=0x7f0c003d;
-    public static final int location_permission_denied=0x7f0c003e;
-    public static final int location_text=0x7f0c003f;
-    public static final int no_address_found=0x7f0c0040;
-    public static final int no_location=0x7f0c0041;
-    public static final int no_service_available=0x7f0c0042;
-    public static final int search_menu_title=0x7f0c0043;
-    public static final int status_bar_notification_info_overflow=0x7f0c0044;
-    public static final int textview_hint=0x7f0c0045;
+    public static final int loading=0x7f0c003e;
+    public static final int location_permission_denied=0x7f0c003f;
+    public static final int location_text=0x7f0c0040;
+    public static final int no_address_found=0x7f0c0041;
+    public static final int no_location=0x7f0c0042;
+    public static final int no_service_available=0x7f0c0043;
+    public static final int search_menu_title=0x7f0c0044;
+    public static final int status_bar_notification_info_overflow=0x7f0c0045;
+    public static final int textview_hint=0x7f0c0046;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0d0000;

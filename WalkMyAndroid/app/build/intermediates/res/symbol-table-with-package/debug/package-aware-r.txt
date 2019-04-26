@@ -970,6 +970,7 @@ string common_signin_button_text
 string common_signin_button_text_long
 string get_location
 string invalid_lat_long_used
+string loading
 string location_permission_denied
 string location_text
 string no_address_found

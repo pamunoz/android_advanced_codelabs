@@ -413,6 +413,7 @@
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="get_location">Get Location</string>
     <string name="invalid_lat_long_used">Invalid coordinates were supplied to the Geocoder</string>
+    <string name="loading">Loading…</string>
     <string name="location_permission_denied">You are not granted permission to the fine location</string>
     <string name="location_text">"Latitude: %1$.4f \n Longitude: %2$.4f \n Timestamp: %3$tr"</string>
     <string name="no_address_found">No Address Found</string>

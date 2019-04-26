@@ -18,17 +18,7 @@ fun Context.toast(message: Any, duration: Int = Toast.LENGTH_SHORT) {
     }
 }
 
-fun Activity.accessFineLocation(requestCode: Int, listener: OnTaskCompleted) {
-    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), requestCode)
-    } else {
-        logd("getLocation: permissions granted")
-        LocationServices.getFusedLocationProviderClient(this)?.lastLocation?.addOnSuccessListener { location ->
-            // Start the reverse geocode AsyncTask
-            FetchAddressTask(this, listener).execute(location)
-        }
-    }
-}
+
 
 fun Any.logd(message: String) {
     val tag: String = this::class.java.simpleName
