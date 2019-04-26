@@ -36,19 +36,28 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
-              <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+              <caret line="77" column="84" selection-start-line="77" selection-start-column="84" selection-end-line="77" selection-end-column="84" />
               <folding>
                 <element signature="e#639#1194#0" expanded="true" />
                 <element signature="e#1218#1880#0" />
-                <element signature="e#1828#1933#0" expanded="true" />
-                <element signature="e#2012#2043#0" expanded="true" />
+                <element signature="e#2008#2113#0" expanded="true" />
+                <element signature="e#2192#2223#0" expanded="true" />
                 <element signature="e#1109#1197#0" />
-                <element signature="e#1559#1594#1" expanded="true" />
+                <element signature="e#2823#2858#1" expanded="true" />
                 <element signature="e#3454#4452#0" />
-                <element signature="e#3720#3760#0" expanded="true" />
-                <element signature="e#3592#3636#0" expanded="true" />
-                <element signature="e#3936#3981#0" expanded="true" />
+                <element signature="e#3781#3821#0" expanded="true" />
+                <element signature="e#4721#4765#0" expanded="true" />
+                <element signature="e#4982#5027#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/OnTaskCompleted.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -94,6 +103,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/ExtApp.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/OnTaskCompleted.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/MainActivity.kt" />
       </list>
     </option>
@@ -278,7 +288,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.32995737" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.32995737" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -360,21 +370,28 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/OnTaskCompleted.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
-          <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+          <caret line="77" column="84" selection-start-line="77" selection-start-column="84" selection-end-line="77" selection-end-column="84" />
           <folding>
             <element signature="e#639#1194#0" expanded="true" />
             <element signature="e#1218#1880#0" />
-            <element signature="e#1828#1933#0" expanded="true" />
-            <element signature="e#2012#2043#0" expanded="true" />
+            <element signature="e#2008#2113#0" expanded="true" />
+            <element signature="e#2192#2223#0" expanded="true" />
             <element signature="e#1109#1197#0" />
-            <element signature="e#1559#1594#1" expanded="true" />
+            <element signature="e#2823#2858#1" expanded="true" />
             <element signature="e#3454#4452#0" />
-            <element signature="e#3720#3760#0" expanded="true" />
-            <element signature="e#3592#3636#0" expanded="true" />
-            <element signature="e#3936#3981#0" expanded="true" />
+            <element signature="e#3781#3821#0" expanded="true" />
+            <element signature="e#4721#4765#0" expanded="true" />
+            <element signature="e#4982#5027#0" expanded="true" />
           </folding>
         </state>
       </provider>
