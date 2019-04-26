@@ -16,8 +16,10 @@
 package com.example.android.walkmyandroid
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Location
+import android.os.AsyncTask
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -65,5 +67,16 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         }
+    }
+
+    inner class FetchAddressTask(ctx: Context) : AsyncTask<Location, Unit, String>() {
+        override fun doInBackground(vararg params: Location?): String {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
+
+        override fun onPostExecute(result: String?) {
+            super.onPostExecute(result)
+        }
+
     }
 }
