@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
                 // If the permission is granted, get the location,
                 // otherwise, show a Toast
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    startTrackingLocation(REQUEST_LOCATION_PERMISSION, this@MainActivity)
+                    startTrackingLocation()
                 } else {
                     toast(R.string.location_permission_denied)
                 }
