@@ -23,6 +23,7 @@ import android.location.Geocoder
 import android.location.Location
 import android.os.AsyncTask
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -31,6 +32,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 import java.lang.IllegalArgumentException
 import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
@@ -89,8 +91,18 @@ class MainActivity : AppCompatActivity() {
                             resultMessage = ctx.getString(R.string.no_address_found)
                             Log.e(MainActivity::class.java.simpleName, resultMessage)
                         }
-                    }
+                    } else {
+                        // If an Address is found, read it into result message
+                        val address: Address = addresses[0]
+                        val addressParts: ArrayList<String> = ArrayList()
 
+                        // Fetch the address lines using getAddressLine
+                        // join them, and send them to the thread
+                        for (a in 0..address.maxAddressLineIndex) {
+                            addressParts.add(address.getAddressLine(a))
+                        }
+                        resultMessage = TextUtils.join("\n", addressParts)
+                    }
                 }
             } catch (e: IOException) {
                 // Catch Network or other IO problems
@@ -101,7 +113,7 @@ class MainActivity : AppCompatActivity() {
                 resultMessage = ctx.getString(R.string.invalid_lat_long_used)
                 Log.e(MainActivity::class.java.simpleName, "$resultMessage Latitude: ${location?.latitude}, Longitude: ${location?.longitude}", e)
             }
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            return resultMessage
         }
 
         override fun onPostExecute(result: String?) {
