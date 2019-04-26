@@ -75,7 +75,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    inner class FetchAddressTask(val ctx: Context) : AsyncTask<Location, Unit, String>() {
+    inner class FetchAddressTask(private val ctx: Context) : AsyncTask<Location, Unit, String>() {
+
         override fun doInBackground(vararg params: Location?): String {
             val geocoder = Geocoder(ctx, Locale.getDefault())
             val location: Location? = params[0]
