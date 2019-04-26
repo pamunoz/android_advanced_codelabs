@@ -83,6 +83,15 @@ class MainActivity : AppCompatActivity() {
             var resultMessage = ""
             try {
                 addresses = location?.let { geocoder.getFromLocation(location.latitude, location.longitude, 1) }
+                if (addresses != null) {
+                    if (addresses.isEmpty()) {
+                        if (resultMessage.isEmpty()) {
+                            resultMessage = ctx.getString(R.string.no_address_found)
+                            Log.e(MainActivity::class.java.simpleName, resultMessage)
+                        }
+                    }
+
+                }
             } catch (e: IOException) {
                 // Catch Network or other IO problems
                 resultMessage = ctx.getString(R.string.no_service_available)
