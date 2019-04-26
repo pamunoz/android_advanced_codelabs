@@ -53,12 +53,8 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
         btn_get_location.setOnClickListener {
             if (!accessFineLocation(REQUEST_LOCATION_PERMISSION)) {
                 LocationServices.getFusedLocationProviderClient(this)?.lastLocation?.addOnSuccessListener { location ->
-                    if (location != null) {
-                        mLastLocation = location
-                        textview_location.text = getString(R.string.location_text, mLastLocation?.latitude, mLastLocation?.longitude, mLastLocation?.time)
-                    } else {
-                        textview_location.text = getString(R.string.no_location)
-                    }
+                    // Start the reverse geocode AsyncTask
+                    FetchAddressTask(this@MainActivity, this@MainActivity).execute(location)
                 }
             }
         }
