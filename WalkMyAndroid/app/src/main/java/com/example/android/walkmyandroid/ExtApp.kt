@@ -16,11 +16,13 @@ fun Context.toast(message: Any, duration: Int = Toast.LENGTH_SHORT) {
     }
 }
 
-fun Activity.accessFineLocation(requestCode: Int) {
-    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+fun Activity.accessFineLocation(requestCode: Int): Boolean {
+    return if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), requestCode)
+        true
     } else {
         logd("getLocation: permissions granted")
+        false
     }
 }
 

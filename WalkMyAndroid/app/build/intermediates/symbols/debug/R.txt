@@ -968,9 +968,11 @@ int string common_signin_button_text 0x7f0c0039
 int string common_signin_button_text_long 0x7f0c003a
 int string get_location 0x7f0c003b
 int string location_permission_denied 0x7f0c003c
-int string search_menu_title 0x7f0c003d
-int string status_bar_notification_info_overflow 0x7f0c003e
-int string textview_hint 0x7f0c003f
+int string location_text 0x7f0c003d
+int string no_location 0x7f0c003e
+int string search_menu_title 0x7f0c003f
+int string status_bar_notification_info_overflow 0x7f0c0040
+int string textview_hint 0x7f0c0041
 int style AlertDialog_AppCompat 0x7f0d0000
 int style AlertDialog_AppCompat_Light 0x7f0d0001
 int style Animation_AppCompat_Dialog 0x7f0d0002

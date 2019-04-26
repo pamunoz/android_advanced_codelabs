@@ -969,6 +969,8 @@ string common_signin_button_text
 string common_signin_button_text_long
 string get_location
 string location_permission_denied
+string location_text
+string no_location
 string search_menu_title
 string status_bar_notification_info_overflow
 string textview_hint
