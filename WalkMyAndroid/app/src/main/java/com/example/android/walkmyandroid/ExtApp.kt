@@ -27,6 +27,6 @@ fun Activity.accessFineLocation(requestCode: Int): Boolean {
 }
 
 fun Any.logd(message: String) {
-    val tag = this::class.java.simpleName
+    val tag: String = this::class.java.simpleName
     Log.d(tag, message)
 }

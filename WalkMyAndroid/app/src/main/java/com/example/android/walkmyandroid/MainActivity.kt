@@ -18,13 +18,19 @@ package com.example.android.walkmyandroid
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
+import android.location.Address
+import android.location.Geocoder
 import android.location.Location
 import android.os.AsyncTask
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.IOException
+import java.lang.IllegalArgumentException
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -69,8 +75,23 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    inner class FetchAddressTask(ctx: Context) : AsyncTask<Location, Unit, String>() {
+    inner class FetchAddressTask(val ctx: Context) : AsyncTask<Location, Unit, String>() {
         override fun doInBackground(vararg params: Location?): String {
+            val geocoder = Geocoder(ctx, Locale.getDefault())
+            val location: Location? = params[0]
+            var addresses: List<Address>? = null
+            var resultMessage = ""
+            try {
+                addresses = location?.let { geocoder.getFromLocation(location.latitude, location.longitude, 1) }
+            } catch (e: IOException) {
+                // Catch Network or other IO problems
+                resultMessage = ctx.getString(R.string.no_service_available)
+                Log.e(MainActivity::class.java.simpleName, resultMessage, e)
+            } catch (e: IllegalArgumentException) {
+                // Catch invalid latitude or longitude
+                resultMessage = ctx.getString(R.string.invalid_lat_long_used)
+                Log.e(MainActivity::class.java.simpleName, "$resultMessage Latitude: ${location?.latitude}, Longitude: ${location?.longitude}", e)
+            }
             TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         }
 
