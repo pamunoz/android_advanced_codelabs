@@ -44,7 +44,8 @@ limitations under the License. -->
         android:layout_marginStart="8dp"
         app:layout_constraintLeft_toRightOf="@+id/button_plain"
         app:layout_constraintTop_toTopOf="@+id/button_plain"
-        app:srcCompat="@drawable/ic_action_discard" />
+        app:srcCompat="@drawable/ic_action_discard"
+        android:contentDescription="@string/cd_discard"/>
 
     <!-- Checkboxes. The checkbox text is read by TalkBack. No content
     description is needed. -->
@@ -77,6 +78,7 @@ limitations under the License. -->
         android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="@+id/checkbox_hyperspace"
         app:layout_constraintTop_toBottomOf="@+id/checkbox_hyperspace"
-        app:srcCompat="@drawable/partly_cloudy" />
+        app:srcCompat="@drawable/partly_cloudy"
+        android:contentDescription="@string/cd_partly_cloudy"/>
     
 </android.support.constraint.ConstraintLayout>
