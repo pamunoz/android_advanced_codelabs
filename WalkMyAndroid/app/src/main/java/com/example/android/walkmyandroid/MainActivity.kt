@@ -78,6 +78,8 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
         textview_location.text = getString(R.string.address_text, getString(R.string.loading), System.currentTimeMillis())
     }
 
+    private fun stopTrackingLocation() {}
+
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         when (requestCode) {
             REQUEST_LOCATION_PERMISSION -> {
