@@ -79,6 +79,7 @@ limitations under the License. -->
         app:layout_constraintLeft_toLeftOf="@+id/checkbox_hyperspace"
         app:layout_constraintTop_toBottomOf="@+id/checkbox_hyperspace"
         app:srcCompat="@drawable/partly_cloudy"
-        android:contentDescription="@string/cd_partly_cloudy"/>
+        android:contentDescription="@string/cd_partly_cloudy"
+        android:focusable="true"/>
     
 </android.support.constraint.ConstraintLayout>
