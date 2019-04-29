@@ -130,7 +130,7 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
         override fun doInBackground(vararg params: Location?): String {
             val geocoder = Geocoder(ctx, Locale.getDefault())
             val location: Location? = params[0]
-            var addresses: List<Address>? = null
+            var addresses: List<Address>?
             var resultMessage = ""
             try {
                 addresses = location?.let { geocoder.getFromLocation(location.latitude, location.longitude, 1) }
