@@ -35,11 +35,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+            <state relative-caret-position="543">
+              <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
               <folding>
                 <element signature="e#1627#1761#0" />
-                <element signature="e#1937#2177#0" />
                 <element signature="e#2219#2944#0" />
                 <element signature="e#3111#3153#0" expanded="true" />
                 <element signature="e#3200#3216#0" />
@@ -348,11 +347,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+        <state relative-caret-position="543">
+          <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
           <folding>
             <element signature="e#1627#1761#0" />
-            <element signature="e#1937#2177#0" />
             <element signature="e#2219#2944#0" />
             <element signature="e#3111#3153#0" expanded="true" />
             <element signature="e#3200#3216#0" />

@@ -30,7 +30,9 @@ import android.text.TextUtils
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
+import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
@@ -41,6 +43,7 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
 
     var mRotateAnim: AnimatorSet
     var mTrackingLocation = false
+    var mLocationCallBack: LocationCallback? = null
 
     init {
         mRotateAnim = AnimatorInflater.loadAnimator(this, R.animator.rotate) as AnimatorSet
@@ -64,6 +67,12 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
 
         btn_get_location.setOnClickListener {
             if (!mTrackingLocation) startTrackingLocation() else stopTrackingLocation()
+        }
+
+        mLocationCallBack = object : LocationCallback() {
+            override fun onLocationResult(p0: LocationResult?) {
+                super.onLocationResult(p0)
+            }
         }
     }
 
