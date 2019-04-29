@@ -75,6 +75,17 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
         }
     }
 
+    override fun onResume() {
+        if (mTrackingLocation) startTrackingLocation()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        if (mTrackingLocation) stopTrackingLocation()
+        mTrackingLocation = true
+        super.onPause()
+    }
+
     private fun startTrackingLocation() {
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
