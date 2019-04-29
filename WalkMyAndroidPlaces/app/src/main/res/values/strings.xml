@@ -32,4 +32,5 @@
     <string name="start_tracking_location">Start tracking location</string>
     <string name="stop_tracking_location">Stop tracking location</string>
     <string name="places_api_key" translatable="false">AIzaSyAgQ_49KxpCpIaUv07DFFFTS1nDkrchBXA</string>
+    <string name="address_text2">"Name: %1$s \n Address: %2$s \n Timestamp: %3$tr"</string>
 </resources>

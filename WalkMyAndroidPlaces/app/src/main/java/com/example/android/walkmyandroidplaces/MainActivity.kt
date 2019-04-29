@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
     // Animation
     private var mRotateAnim: AnimatorSet? = null
     private val places_api_key = getString(R.string.places_api_key)
+    private var mLastPlaceName: String = ""
 
     // You use this object to get information about the device's current location.
 
