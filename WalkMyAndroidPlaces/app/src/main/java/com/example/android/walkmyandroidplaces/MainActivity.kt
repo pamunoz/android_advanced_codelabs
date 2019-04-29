@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
 
     // Animation
     private var mRotateAnim: AnimatorSet? = null
-    private val places_api_key = getString(R.string.places_api_key)
+    private var places_api_key = ""
     private var mLastPlaceName: String = ""
     var mPlacesClient: PlacesClient? = null
 
@@ -72,6 +72,8 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        places_api_key = getString(R.string.places_api_key)
 
         // Initialize Places.
         Places.initialize(applicationContext, places_api_key)
@@ -135,16 +137,13 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), REQUEST_LOCATION_PERMISSION)
         } else {
             mTrackingLocation = true
-            mFusedLocationClient!!.requestLocationUpdates(locationRequest,
-                    mLocationCallback!!, null)
+            mFusedLocationClient!!.requestLocationUpdates(locationRequest, mLocationCallback!!, null)
 
             // Set a loading text while you wait for the address to be
             // returned
-            textview_location.text = getString(R.string.address_text,
-                    getString(R.string.loading),
-                    System.currentTimeMillis())
-            button_location.setText(R.string.stop_tracking_location)
-            mRotateAnim!!.start()
+//            textview_location.text = getString(R.string.address_text, getString(R.string.loading), System.currentTimeMillis())
+//            button_location.setText(R.string.stop_tracking_location)
+//            mRotateAnim!!.start()
         }
     }
 
@@ -202,40 +201,42 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
 
     override fun onTaskCompleted(result: String) {
 
-        // Use fields to define the data types to return.
-        val placeFields = asList(Place.Field.NAME)
 
-        // Use the builder to create a FindCurrentPlaceRequest.
-        val request = FindCurrentPlaceRequest.builder(placeFields).build()
-        // Call findCurrentPlace and handle the response (first check that the user has granted permission).
-        if (ContextCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            val placeResponse = mPlacesClient?.findCurrentPlace(request)
-            placeResponse?.addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    val response = task.result
-                    for (placeLikelihood in response!!.placeLikelihoods) {
-                        Log.i(TAG, String.format("Place '%s' has likelihood: %f",
-                                placeLikelihood.place.name,
-                                placeLikelihood.likelihood))
-                    }
-                } else {
-                    val exception = task.exception
-                    if (exception is ApiException) {
-                        val apiException = exception as ApiException
-                        Log.e(TAG, "Place not found: " + apiException.statusCode)
-                    }
-                }
-            }
-        } else {
-            // A local method to request required permissions;
-            // See https://developer.android.com/training/permissions/requesting
-            getLocationPermission()
-        }
 
         if (mTrackingLocation) {
+
+            // Use fields to define the data types to return.
+            val placeFields = asList(Place.Field.NAME)
+
+            // Use the builder to create a FindCurrentPlaceRequest.
+            val request = FindCurrentPlaceRequest.builder(placeFields).build()
+            // Call findCurrentPlace and handle the response (first check that the user has granted permission).
+            if (ContextCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                val placeResponse = mPlacesClient?.findCurrentPlace(request)
+                placeResponse?.addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        val response = task.result
+                        for (placeLikelihood in response!!.placeLikelihoods) {
+                            textview_location.text = getString(R.string.address_text, placeLikelihood.place.name, response, System.currentTimeMillis())
+                            Log.i(TAG, String.format("Place '%s' has likelihood: %f",
+                                    placeLikelihood.place.name,
+                                    placeLikelihood.likelihood))
+                        }
+                    } else {
+                        val exception = task.exception
+                        if (exception is ApiException) {
+                            val apiException = exception as ApiException
+                            Log.e(TAG, "Place not found: " + apiException.statusCode)
+                        }
+                    }
+                }
+            } else {
+                // A local method to request required permissions;
+                // See https://developer.android.com/training/permissions/requesting
+                getLocationPermission()
+            }
             // Update the UI
-            textview_location.text = getString(R.string.address_text,
-                    result, System.currentTimeMillis())
+            //textview_location.text = getString(R.string.address_text, result, System.currentTimeMillis())
         }
     }
 
