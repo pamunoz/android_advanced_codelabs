@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
     }
 
     override fun onSaveInstanceState(outState: Bundle?) {
-        outState.putBoolean(TRACKING_LOCATION_KEY, mTrackingLocation)
+        outState?.putBoolean(TRACKING_LOCATION_KEY, mTrackingLocation)
         super.onSaveInstanceState(outState)
     }
 

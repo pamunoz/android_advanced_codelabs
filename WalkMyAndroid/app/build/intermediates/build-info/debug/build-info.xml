@@ -5,24 +5,24 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
+    ir-eligibility="CLASS_ADDED"
     plugin-version="3.4.0"
-    timestamp="1556535112472"
+    timestamp="1556546602134"
     token="5895578223188052496"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="31" />
+        duration="110" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="33" />
+        duration="73" />
     <task
         name="verifier"
-        duration="9" />
+        duration="39" />
 
     <artifact
         location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -74,8 +74,8 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1556535112472"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1556546602134"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroid\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
