@@ -19,30 +19,14 @@ import android.Manifest
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
 import android.content.pm.PackageManager
-
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
-import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
-
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationCallback
-import com.google.android.gms.location.LocationRequest
-import com.google.android.gms.location.LocationResult
-import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
-
-    // Views
-//    private var mLocationButton: Button? = null
-//    private var mLocationTextView: TextView? = null
-//    private var mAndroidImageView: ImageView? = null
 
     // Location classes
     private var mTrackingLocation: Boolean = false
@@ -71,11 +55,6 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       // mLocationButton = findViewById<View>(R.id.button_location) as Button
-        //mLocationTextView = findViewById<View>(R.id.textview_location) as TextView
-        //mAndroidImageView = findViewById<View>(R.id.imageview_android) as ImageView
-
-
         // Initialize the FusedLocationClient.
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(
                 this)
@@ -93,10 +72,6 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
 
         // Set the listener for the location button.
         button_location.setOnClickListener {
-            /**
-             * Toggle the tracking state.
-             * @param v The track location button.
-             */
             if (!mTrackingLocation) {
                 startTrackingLocation()
             } else {
@@ -190,7 +165,7 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
 
                 // If the permission is granted, get the location, otherwise,
                 // show a Toast
-                if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     startTrackingLocation()
                 } else {
                     Toast.makeText(this,
@@ -226,8 +201,8 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
     companion object {
 
         // Constants
-        private val REQUEST_LOCATION_PERMISSION = 1
-        private val TRACKING_LOCATION_KEY = "tracking_location"
+        private const val REQUEST_LOCATION_PERMISSION = 1
+        private const val TRACKING_LOCATION_KEY = "tracking_location"
     }
 
 }

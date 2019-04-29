@@ -31,13 +31,13 @@ import java.util.Locale
 /**
  * AsyncTask for reverse geocoding coordinates into a physical address.
  */
-internal class FetchAddressTask(private val mContext: Context, private val mListener: OnTaskCompleted) : AsyncTask<Location, Void, String>() {
+internal class FetchAddressTask(private val context: Context, private val listener: OnTaskCompleted) : AsyncTask<Location, Void, String>() {
 
     private val TAG = FetchAddressTask::class.java.simpleName
 
     override fun doInBackground(vararg params: Location): String {
         // Set up the geocoder
-        val geocoder = Geocoder(mContext,
+        val geocoder = Geocoder(context,
                 Locale.getDefault())
 
         // Get the passed in location
@@ -53,11 +53,11 @@ internal class FetchAddressTask(private val mContext: Context, private val mList
                     1)
         } catch (ioException: IOException) {
             // Catch network or other I/O problems
-            resultMessage = mContext.getString(R.string.service_not_available)
+            resultMessage = context.getString(R.string.service_not_available)
             Log.e(TAG, resultMessage, ioException)
         } catch (illegalArgumentException: IllegalArgumentException) {
             // Catch invalid latitude or longitude values
-            resultMessage = mContext.getString(R.string.invalid_lat_long_used)
+            resultMessage = context.getString(R.string.invalid_lat_long_used)
             Log.e(TAG, resultMessage + ". " +
                     "Latitude = " + location.latitude +
                     ", Longitude = " +
@@ -67,7 +67,7 @@ internal class FetchAddressTask(private val mContext: Context, private val mList
         // If no addresses found, print an error message.
         if (addresses == null || addresses.size == 0) {
             if (resultMessage.isEmpty()) {
-                resultMessage = mContext.getString(R.string.no_address_found)
+                resultMessage = context.getString(R.string.no_address_found)
                 Log.e(TAG, resultMessage)
             }
         } else {
@@ -84,7 +84,6 @@ internal class FetchAddressTask(private val mContext: Context, private val mList
             resultMessage = TextUtils.join(
                     "\n",
                     addressParts)
-
         }
 
         return resultMessage
@@ -97,7 +96,7 @@ internal class FetchAddressTask(private val mContext: Context, private val mList
      * message if the task failed.
      */
     override fun onPostExecute(address: String) {
-        mListener.onTaskCompleted(address)
+        listener.onTaskCompleted(address)
         super.onPostExecute(address)
     }
 
