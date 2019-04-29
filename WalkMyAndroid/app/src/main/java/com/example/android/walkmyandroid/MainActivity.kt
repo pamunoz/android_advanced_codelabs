@@ -81,10 +81,7 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), REQUEST_LOCATION_PERMISSION)
         } else {
             logd("getLocation: permissions granted")
-            LocationServices.getFusedLocationProviderClient(this)?.lastLocation?.addOnSuccessListener { location ->
-                // Start the reverse geocode AsyncTask
-                FetchAddressTask(this, this).execute(location)
-            }
+            LocationServices.getFusedLocationProviderClient(this)?.requestLocationUpdates(getLocationRequest(), mLocationCallBack, null)
         }
         textview_location.text = getString(R.string.address_text, getString(R.string.loading), System.currentTimeMillis())
         // Start animation
