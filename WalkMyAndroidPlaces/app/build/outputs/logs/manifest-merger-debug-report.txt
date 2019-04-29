@@ -1,0 +1,208 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:17:1-39:12
+INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:17:1-39:12
+INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:17:1-39:12
+INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:17:1-39:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\9200b3122f8bf672717e7979bbb117e2\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\8fcbbc489e9a891e4f2b3d76e31d53df\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-location:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\baa35ff28a145aa443fc60a015bd9900\AndroidManifest.xml:2:1-5:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\793ad373e7eacd583544e02f6547894c\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\dcbe46af51d20d88420df0414214dac4\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\2295e70a6f8d532e64ec837b06f6cafe\AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.android.gms:play-services-tasks:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\cac1da4c430cb7f3d7df4ec05a775af3\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e58a841cc92d190788781fe380277ab4\AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\1fee12a53697507e25e599e8aa728631\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\3a06b05aa3a822c41814b9adc0533e0f\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\0f03fe79e65a17d4d9e3ad5b13472da0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e7ab84f5341822eefd95de256af42a12\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\47fecb3c210112a224dd6895d94847a7\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\f42db458bc4f93c46500fc7174e955a1\AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-location-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\7702533a3a1a6af9b308425bcf8be42b\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-base-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\b7796ecf9b9b5ca8d9421ca5e50910d8\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\dfdc1d3bfeccceea1755660bb88be4a8\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\df155fa0f1970425b50d923d734908a9\AndroidManifest.xml:2:1-6:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\09bb917036fa272214bf6454a6ff588f\AndroidManifest.xml:17:1-30:12
+INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:17:1-39:12
+INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:17:1-39:12
+INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:17:1-39:12
+	package
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:18:5-54
+		INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+		INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:17:1-39:12
+		INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:17:1-39:12
+		INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:17:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:20:22-76
+application
+ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:22:5-37:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\9200b3122f8bf672717e7979bbb117e2\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\9200b3122f8bf672717e7979bbb117e2\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\8fcbbc489e9a891e4f2b3d76e31d53df\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\8fcbbc489e9a891e4f2b3d76e31d53df\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-location:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\baa35ff28a145aa443fc60a015bd9900\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-location:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\baa35ff28a145aa443fc60a015bd9900\AndroidManifest.xml:4:5-19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\793ad373e7eacd583544e02f6547894c\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\793ad373e7eacd583544e02f6547894c\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\dcbe46af51d20d88420df0414214dac4\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\dcbe46af51d20d88420df0414214dac4\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\2295e70a6f8d532e64ec837b06f6cafe\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\2295e70a6f8d532e64ec837b06f6cafe\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\cac1da4c430cb7f3d7df4ec05a775af3\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\cac1da4c430cb7f3d7df4ec05a775af3\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e58a841cc92d190788781fe380277ab4\AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e58a841cc92d190788781fe380277ab4\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\1fee12a53697507e25e599e8aa728631\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\1fee12a53697507e25e599e8aa728631\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\3a06b05aa3a822c41814b9adc0533e0f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\3a06b05aa3a822c41814b9adc0533e0f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\0f03fe79e65a17d4d9e3ad5b13472da0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\0f03fe79e65a17d4d9e3ad5b13472da0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e7ab84f5341822eefd95de256af42a12\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e7ab84f5341822eefd95de256af42a12\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\47fecb3c210112a224dd6895d94847a7\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\47fecb3c210112a224dd6895d94847a7\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\f42db458bc4f93c46500fc7174e955a1\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\f42db458bc4f93c46500fc7174e955a1\AndroidManifest.xml:25:5-29:19
+MERGED from [com.google.android.gms:play-services-location-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\7702533a3a1a6af9b308425bcf8be42b\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-location-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\7702533a3a1a6af9b308425bcf8be42b\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\b7796ecf9b9b5ca8d9421ca5e50910d8\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\b7796ecf9b9b5ca8d9421ca5e50910d8\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\dfdc1d3bfeccceea1755660bb88be4a8\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\dfdc1d3bfeccceea1755660bb88be4a8\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\df155fa0f1970425b50d923d734908a9\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\df155fa0f1970425b50d923d734908a9\AndroidManifest.xml:5:5-20
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\09bb917036fa272214bf6454a6ff588f\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\09bb917036fa272214bf6454a6ff588f\AndroidManifest.xml:24:5-28:19
+	android:supportsRtl
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:27:9-35
+	android:label
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:25:9-41
+	android:roundIcon
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:26:9-54
+	android:icon
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:24:9-43
+	android:allowBackup
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:23:9-35
+	android:theme
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:28:9-40
+activity#com.example.android.walkmyandroidplaces.MainActivity
+ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:29:9-35:20
+	android:name
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:29:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:30:13-34:29
+action#android.intent.action.MAIN
+ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:31:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:33:17-77
+	android:name
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml:33:27-74
+uses-sdk
+INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\9200b3122f8bf672717e7979bbb117e2\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\9200b3122f8bf672717e7979bbb117e2\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\8fcbbc489e9a891e4f2b3d76e31d53df\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\8fcbbc489e9a891e4f2b3d76e31d53df\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-location:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\baa35ff28a145aa443fc60a015bd9900\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\baa35ff28a145aa443fc60a015bd9900\AndroidManifest.xml:3:5-43
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\793ad373e7eacd583544e02f6547894c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\793ad373e7eacd583544e02f6547894c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\dcbe46af51d20d88420df0414214dac4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\dcbe46af51d20d88420df0414214dac4\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\2295e70a6f8d532e64ec837b06f6cafe\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\2295e70a6f8d532e64ec837b06f6cafe\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\cac1da4c430cb7f3d7df4ec05a775af3\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\cac1da4c430cb7f3d7df4ec05a775af3\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e58a841cc92d190788781fe380277ab4\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e58a841cc92d190788781fe380277ab4\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\1fee12a53697507e25e599e8aa728631\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\1fee12a53697507e25e599e8aa728631\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\3a06b05aa3a822c41814b9adc0533e0f\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\3a06b05aa3a822c41814b9adc0533e0f\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\0f03fe79e65a17d4d9e3ad5b13472da0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\0f03fe79e65a17d4d9e3ad5b13472da0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e7ab84f5341822eefd95de256af42a12\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e7ab84f5341822eefd95de256af42a12\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\47fecb3c210112a224dd6895d94847a7\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\47fecb3c210112a224dd6895d94847a7\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\f42db458bc4f93c46500fc7174e955a1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\f42db458bc4f93c46500fc7174e955a1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.google.android.gms:play-services-location-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\7702533a3a1a6af9b308425bcf8be42b\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-location-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\7702533a3a1a6af9b308425bcf8be42b\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\b7796ecf9b9b5ca8d9421ca5e50910d8\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\b7796ecf9b9b5ca8d9421ca5e50910d8\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\dfdc1d3bfeccceea1755660bb88be4a8\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\dfdc1d3bfeccceea1755660bb88be4a8\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\df155fa0f1970425b50d923d734908a9\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\df155fa0f1970425b50d923d734908a9\AndroidManifest.xml:4:5-43
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\09bb917036fa272214bf6454a6ff588f\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\09bb917036fa272214bf6454a6ff588f\AndroidManifest.xml:20:5-22:41
+INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\9200b3122f8bf672717e7979bbb117e2\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+		INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+		ADDED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+		INJECTED from D:\pablo\work\android\android-advanced-codelabs\WalkMyAndroidPlaces\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\9200b3122f8bf672717e7979bbb117e2\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\793ad373e7eacd583544e02f6547894c\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\793ad373e7eacd583544e02f6547894c\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\dcbe46af51d20d88420df0414214dac4\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\dcbe46af51d20d88420df0414214dac4\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\1fee12a53697507e25e599e8aa728631\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\1fee12a53697507e25e599e8aa728631\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\3a06b05aa3a822c41814b9adc0533e0f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\3a06b05aa3a822c41814b9adc0533e0f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\0f03fe79e65a17d4d9e3ad5b13472da0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\0f03fe79e65a17d4d9e3ad5b13472da0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e7ab84f5341822eefd95de256af42a12\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e7ab84f5341822eefd95de256af42a12\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\47fecb3c210112a224dd6895d94847a7\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\47fecb3c210112a224dd6895d94847a7\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\f42db458bc4f93c46500fc7174e955a1\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\f42db458bc4f93c46500fc7174e955a1\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\9200b3122f8bf672717e7979bbb117e2\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\9200b3122f8bf672717e7979bbb117e2\AndroidManifest.xml:27:13-51
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\2295e70a6f8d532e64ec837b06f6cafe\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\2295e70a6f8d532e64ec837b06f6cafe\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\2295e70a6f8d532e64ec837b06f6cafe\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\2295e70a6f8d532e64ec837b06f6cafe\AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e58a841cc92d190788781fe380277ab4\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e58a841cc92d190788781fe380277ab4\AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:11.4.2] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\e58a841cc92d190788781fe380277ab4\AndroidManifest.xml:20:20-65
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\09bb917036fa272214bf6454a6ff588f\AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\09bb917036fa272214bf6454a6ff588f\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Cris\.gradle\caches\transforms-2\files-2.1\09bb917036fa272214bf6454a6ff588f\AndroidManifest.xml:26:13-58
