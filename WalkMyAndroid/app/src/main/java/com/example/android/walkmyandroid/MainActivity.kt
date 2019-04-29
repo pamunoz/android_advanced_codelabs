@@ -83,7 +83,18 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
         btn_get_location.text = getString(R.string.stop_tracking_location)
     }
 
-    private fun stopTrackingLocation() {}
+    /**
+     * Method that stops tracking the device. It removes the location
+     * updates, stops the animation and reset the UI.
+     */
+    private fun stopTrackingLocation() {
+        if (mTrackingLocation) {
+            mTrackingLocation = false
+            btn_get_location.text = getString(R.string.start_tracking_location)
+            textview_location.text = getString(R.string.textview_hint)
+            mRotateAnim.end()
+        }
+    }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         when (requestCode) {
