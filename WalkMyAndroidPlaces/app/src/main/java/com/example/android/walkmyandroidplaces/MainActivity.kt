@@ -16,21 +16,30 @@
 package com.example.android.walkmyandroidplaces
 
 import android.Manifest
+import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.animation.AnimatorInflater
 import android.animation.AnimatorSet
 import android.content.pm.PackageManager
 import android.os.Bundle
-import androidx.core.app.ActivityCompat
-import androidx.appcompat.app.AppCompatActivity
+import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.location.*
-import kotlinx.android.synthetic.main.activity_main.*
-import com.google.android.libraries.places.api.Places;
+import com.google.android.libraries.places.api.Places
+import com.google.android.libraries.places.api.model.Place
+import com.google.android.libraries.places.api.net.FindCurrentPlaceRequest
 import com.google.android.libraries.places.api.net.PlacesClient
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+import java.util.Arrays.asList
 
 
 class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
+
+    private val TAG = MainActivity::class.java.simpleName
 
     // Location classes
     private var mTrackingLocation: Boolean = false
@@ -41,6 +50,7 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
     private var mRotateAnim: AnimatorSet? = null
     private val places_api_key = getString(R.string.places_api_key)
     private var mLastPlaceName: String = ""
+    var mPlacesClient: PlacesClient? = null
 
     // You use this object to get information about the device's current location.
 
@@ -67,7 +77,7 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
         Places.initialize(applicationContext, places_api_key)
 
         // Create a new Places client instance.
-        val placesClient = Places.createClient(this)
+        mPlacesClient = Places.createClient(this)
 
 
         // Initialize the FusedLocationClient.
@@ -192,6 +202,37 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
     }
 
     override fun onTaskCompleted(result: String) {
+
+        // Use fields to define the data types to return.
+        val placeFields = asList(Place.Field.NAME)
+
+        // Use the builder to create a FindCurrentPlaceRequest.
+        val request = FindCurrentPlaceRequest.builder(placeFields).build()
+        // Call findCurrentPlace and handle the response (first check that the user has granted permission).
+        if (ContextCompat.checkSelfPermission(this, ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            val placeResponse = mPlacesClient?.findCurrentPlace(request)
+            placeResponse?.addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val response = task.result
+                    for (placeLikelihood in response!!.placeLikelihoods) {
+                        Log.i(TAG, String.format("Place '%s' has likelihood: %f",
+                                placeLikelihood.place.name,
+                                placeLikelihood.likelihood))
+                    }
+                } else {
+                    val exception = task.exception
+                    if (exception is ApiException) {
+                        val apiException = exception as ApiException
+                        Log.e(TAG, "Place not found: " + apiException.statusCode)
+                    }
+                }
+            }
+        } else {
+            // A local method to request required permissions;
+            // See https://developer.android.com/training/permissions/requesting
+            //getLocationPermission()
+        }
+
         if (mTrackingLocation) {
             // Update the UI
             textview_location.text = getString(R.string.address_text,

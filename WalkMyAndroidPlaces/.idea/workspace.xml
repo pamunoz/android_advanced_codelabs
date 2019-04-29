@@ -63,11 +63,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroidplaces/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+            <state relative-caret-position="2626">
+              <caret line="229" column="16" lean-forward="true" selection-start-line="229" selection-start-column="16" selection-end-line="229" selection-end-column="16" />
               <folding>
-                <element signature="e#645#1143#0" expanded="true" />
+                <element signature="e#645#1503#0" expanded="true" />
                 <element signature="e#1469#1503#0" expanded="true" />
+                <element signature="e#3396#3494#0" expanded="true" />
+                <element signature="e#3414#3441#1" expanded="true" />
+                <element signature="e#3443#3470#1" expanded="true" />
+                <element signature="e#4701#5575#0" />
+                <element signature="e#5744#6000#0" />
+                <element signature="e#6129#6250#0" />
+                <element signature="e#6256#6665#0" />
+                <element signature="e#6868#7417#0" />
               </folding>
             </state>
           </provider>
@@ -86,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+            <state relative-caret-position="408">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -354,18 +362,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+        <state relative-caret-position="408">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroidplaces/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+        <state relative-caret-position="2626">
+          <caret line="229" column="16" lean-forward="true" selection-start-line="229" selection-start-column="16" selection-end-line="229" selection-end-column="16" />
           <folding>
-            <element signature="e#645#1143#0" expanded="true" />
+            <element signature="e#645#1503#0" expanded="true" />
             <element signature="e#1469#1503#0" expanded="true" />
+            <element signature="e#3396#3494#0" expanded="true" />
+            <element signature="e#3414#3441#1" expanded="true" />
+            <element signature="e#3443#3470#1" expanded="true" />
+            <element signature="e#4701#5575#0" />
+            <element signature="e#5744#6000#0" />
+            <element signature="e#6129#6250#0" />
+            <element signature="e#6256#6665#0" />
+            <element signature="e#6868#7417#0" />
           </folding>
         </state>
       </provider>
