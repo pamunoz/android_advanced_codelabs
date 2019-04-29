@@ -30,10 +30,7 @@ import android.text.TextUtils
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.google.android.gms.location.LocationCallback
-import com.google.android.gms.location.LocationRequest
-import com.google.android.gms.location.LocationResult
-import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 import java.util.*
@@ -44,9 +41,11 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
     var mRotateAnim: AnimatorSet
     var mTrackingLocation = false
     var mLocationCallBack: LocationCallback? = null
+    var mFusedLocationProviderClient: FusedLocationProviderClient
 
     init {
         mRotateAnim = AnimatorInflater.loadAnimator(this, R.animator.rotate) as AnimatorSet
+        mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
     }
 
     override fun onTaskCompleted(result: String) {
@@ -81,7 +80,7 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), REQUEST_LOCATION_PERMISSION)
         } else {
             logd("getLocation: permissions granted")
-            LocationServices.getFusedLocationProviderClient(this)?.requestLocationUpdates(getLocationRequest(), mLocationCallBack, null)
+            mFusedLocationProviderClient.requestLocationUpdates(getLocationRequest(), mLocationCallBack, null)
         }
         textview_location.text = getString(R.string.address_text, getString(R.string.loading), System.currentTimeMillis())
         // Start animation
@@ -100,6 +99,7 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
             btn_get_location.text = getString(R.string.start_tracking_location)
             textview_location.text = getString(R.string.textview_hint)
             mRotateAnim.end()
+            mFusedLocationProviderClient.removeLocationUpdates(mLocationCallBack)
         }
     }
 
