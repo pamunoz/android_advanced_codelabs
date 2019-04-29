@@ -30,6 +30,7 @@ import android.text.TextUtils
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationServices
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
@@ -94,6 +95,12 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
             textview_location.text = getString(R.string.textview_hint)
             mRotateAnim.end()
         }
+    }
+
+    private fun getLocationRequest() = LocationRequest().apply {
+        interval = 10000L
+        fastestInterval = 5000L
+        priority = LocationRequest.PRIORITY_HIGH_ACCURACY
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
