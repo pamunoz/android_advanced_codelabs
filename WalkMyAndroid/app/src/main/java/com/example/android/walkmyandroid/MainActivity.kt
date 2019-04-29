@@ -77,6 +77,10 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
             }
         }
         textview_location.text = getString(R.string.address_text, getString(R.string.loading), System.currentTimeMillis())
+        // Start animation
+        mRotateAnim.start()
+        mTrackingLocation = true
+        btn_get_location.text = getString(R.string.stop_tracking_location)
     }
 
     private fun stopTrackingLocation() {}
