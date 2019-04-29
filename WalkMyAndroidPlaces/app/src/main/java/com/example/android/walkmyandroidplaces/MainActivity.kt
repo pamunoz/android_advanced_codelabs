@@ -25,6 +25,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import com.google.android.gms.location.*
 import kotlinx.android.synthetic.main.activity_main.*
+import com.google.android.libraries.places.api.Places;
+import com.google.android.libraries.places.api.net.PlacesClient
+
+
+
+
 
 class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
 
@@ -35,6 +41,9 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
 
     // Animation
     private var mRotateAnim: AnimatorSet? = null
+    private val places_api_key = getString(R.string.places_api_key)
+
+    // You use this object to get information about the device's current location.
 
 
     /**
@@ -54,6 +63,13 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Initialize Places.
+        Places.initialize(applicationContext, places_api_key)
+
+        // Create a new Places client instance.
+        val placesClient = Places.createClient(this)
+
 
         // Initialize the FusedLocationClient.
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(
