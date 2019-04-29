@@ -411,7 +411,7 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <string name="get_location">Get Location</string>
+    <string name="get_location">Start Tracking Location.</string>
     <string name="invalid_lat_long_used">Invalid coordinates were supplied to the Geocoder</string>
     <string name="loading">Loading…</string>
     <string name="location_permission_denied">You are not granted permission to the fine location</string>
@@ -420,10 +420,10 @@
     <string name="no_location">No location</string>
     <string name="no_service_available">No Service Available</string>
     <string name="search_menu_title">Search</string>
+    <string name="start_tracking_location">Start Tracking Location</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="textview_hint">Press the button to get the last known
-        location
-    </string>
+    <string name="stop_tracking_location">Stop Tracking Location</string>
+    <string name="textview_hint">Press the button to start tracking your location</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

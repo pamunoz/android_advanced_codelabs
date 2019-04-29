@@ -976,8 +976,10 @@ int string no_address_found 0x7f0c0041
 int string no_location 0x7f0c0042
 int string no_service_available 0x7f0c0043
 int string search_menu_title 0x7f0c0044
-int string status_bar_notification_info_overflow 0x7f0c0045
-int string textview_hint 0x7f0c0046
+int string start_tracking_location 0x7f0c0045
+int string status_bar_notification_info_overflow 0x7f0c0046
+int string stop_tracking_location 0x7f0c0047
+int string textview_hint 0x7f0c0048
 int style AlertDialog_AppCompat 0x7f0d0000
 int style AlertDialog_AppCompat_Light 0x7f0d0001
 int style Animation_AppCompat_Dialog 0x7f0d0002

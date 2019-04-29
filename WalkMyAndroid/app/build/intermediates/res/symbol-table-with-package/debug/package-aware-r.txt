@@ -977,7 +977,9 @@ string no_address_found
 string no_location
 string no_service_available
 string search_menu_title
+string start_tracking_location
 string status_bar_notification_info_overflow
+string stop_tracking_location
 string textview_hint
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

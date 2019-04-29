@@ -38,15 +38,10 @@ import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity(), OnTaskCompleted {
 
-    var mRotateAnim: AnimatorSet
+    var mRotateAnim: AnimatorSet? = null
     var mTrackingLocation = false
     var mLocationCallBack: LocationCallback? = null
-    var mFusedLocationProviderClient: FusedLocationProviderClient
-
-    init {
-        mRotateAnim = AnimatorInflater.loadAnimator(this, R.animator.rotate) as AnimatorSet
-        mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
-    }
+    var mFusedLocationProviderClient: FusedLocationProviderClient? = null
 
     override fun onTaskCompleted(result: String) {
         // Update the UI
@@ -64,7 +59,8 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mRotateAnim.setTarget(imageview_android)
+        mRotateAnim?.setTarget(imageview_android)
+        mRotateAnim = AnimatorInflater.loadAnimator(this, R.animator.rotate) as AnimatorSet
 
         btn_get_location.setOnClickListener {
             if (!mTrackingLocation) startTrackingLocation() else stopTrackingLocation()
@@ -80,15 +76,16 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
     }
 
     private fun startTrackingLocation() {
+        mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), REQUEST_LOCATION_PERMISSION)
         } else {
             logd("getLocation: permissions granted")
-            mFusedLocationProviderClient.requestLocationUpdates(getLocationRequest(), mLocationCallBack, null)
+            mFusedLocationProviderClient?.requestLocationUpdates(getLocationRequest(), mLocationCallBack, null)
         }
         textview_location.text = getString(R.string.address_text, getString(R.string.loading), System.currentTimeMillis())
         // Start animation
-        mRotateAnim.start()
+        mRotateAnim?.start()
         mTrackingLocation = true
         btn_get_location.text = getString(R.string.stop_tracking_location)
     }
@@ -102,8 +99,8 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
             mTrackingLocation = false
             btn_get_location.text = getString(R.string.start_tracking_location)
             textview_location.text = getString(R.string.textview_hint)
-            mRotateAnim.end()
-            mFusedLocationProviderClient.removeLocationUpdates(mLocationCallBack)
+            mRotateAnim?.end()
+            mFusedLocationProviderClient?.removeLocationUpdates(mLocationCallBack)
         }
     }
 
