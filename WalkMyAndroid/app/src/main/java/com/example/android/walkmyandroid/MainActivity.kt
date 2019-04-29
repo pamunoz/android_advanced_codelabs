@@ -69,8 +69,10 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
         }
 
         mLocationCallBack = object : LocationCallback() {
-            override fun onLocationResult(p0: LocationResult?) {
-                super.onLocationResult(p0)
+            override fun onLocationResult(locationResult: LocationResult?) {
+                // If tracking is turned on, reverse geocode into an address
+                if (mTrackingLocation) FetchAddressTask(this@MainActivity, this@MainActivity).execute(locationResult?.lastLocation)
+                super.onLocationResult(locationResult)
             }
         }
     }

@@ -9,9 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c11c804-16aa-4254-8698-af7313254fd7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/MainActivity.kt" afterDir="false" />
-    </list>
+    <list default="true" id="8c11c804-16aa-4254-8698-af7313254fd7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +33,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="83" column="131" selection-start-line="83" selection-start-column="131" selection-end-line="83" selection-end-column="131" />
+            <state relative-caret-position="598">
+              <caret line="101" column="80" selection-start-line="101" selection-start-column="80" selection-end-line="101" selection-end-column="80" />
               <folding>
                 <element signature="e#1627#1761#0" />
+                <element signature="e#2219#2944#0" />
                 <element signature="e#3111#3153#0" expanded="true" />
-                <element signature="e#3200#3216#0" />
                 <element signature="e#3449#3492#0" expanded="true" />
                 <element signature="e#3530#3563#0" expanded="true" />
                 <element signature="e#3107#3670#0" />
@@ -346,12 +344,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/walkmyandroid/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="83" column="131" selection-start-line="83" selection-start-column="131" selection-end-line="83" selection-end-column="131" />
+        <state relative-caret-position="598">
+          <caret line="101" column="80" selection-start-line="101" selection-start-column="80" selection-end-line="101" selection-end-column="80" />
           <folding>
             <element signature="e#1627#1761#0" />
+            <element signature="e#2219#2944#0" />
             <element signature="e#3111#3153#0" expanded="true" />
-            <element signature="e#3200#3216#0" />
             <element signature="e#3449#3492#0" expanded="true" />
             <element signature="e#3530#3563#0" expanded="true" />
             <element signature="e#3107#3670#0" />
