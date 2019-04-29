@@ -27,9 +27,7 @@ import com.google.android.gms.location.*
 import kotlinx.android.synthetic.main.activity_main.*
 import com.google.android.libraries.places.api.Places;
 import com.google.android.libraries.places.api.net.PlacesClient
-
-
-
+import java.util.*
 
 
 class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
@@ -94,6 +92,7 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
             } else {
                 stopTrackingLocation()
             }
+            textview_location.text = getString(R.string.address_text, getString(R.string.loading), getString(R.string.loading), Date())
         }
 
 
