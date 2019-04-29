@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
         mRotateAnim.setTarget(imageview_android)
 
         btn_get_location.setOnClickListener {
-            startTrackingLocation()
+            if (!mTrackingLocation) startTrackingLocation() else stopTrackingLocation()
         }
     }
 
