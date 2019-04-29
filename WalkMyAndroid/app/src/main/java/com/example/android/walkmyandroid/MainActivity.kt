@@ -50,7 +50,9 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
 
     override fun onTaskCompleted(result: String) {
         // Update the UI
-        textview_location.text = getString(R.string.address_text, result, System.currentTimeMillis())
+        if (mTrackingLocation) {
+            textview_location.text = getString(R.string.address_text, result, System.currentTimeMillis())
+        }
     }
 
     companion object {
@@ -72,7 +74,7 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
             override fun onLocationResult(locationResult: LocationResult?) {
                 // If tracking is turned on, reverse geocode into an address
                 if (mTrackingLocation) FetchAddressTask(this@MainActivity, this@MainActivity).execute(locationResult?.lastLocation)
-                super.onLocationResult(locationResult)
+                //super.onLocationResult(locationResult)
             }
         }
     }
