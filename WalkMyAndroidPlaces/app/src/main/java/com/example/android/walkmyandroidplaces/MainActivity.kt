@@ -132,8 +132,7 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
     private fun startTrackingLocation() {
         if (ActivityCompat.checkSelfPermission(this,
                         Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-                    REQUEST_LOCATION_PERMISSION)
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), REQUEST_LOCATION_PERMISSION)
         } else {
             mTrackingLocation = true
             mFusedLocationClient!!.requestLocationUpdates(locationRequest,
@@ -230,7 +229,7 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
         } else {
             // A local method to request required permissions;
             // See https://developer.android.com/training/permissions/requesting
-            //getLocationPermission()
+            getLocationPermission()
         }
 
         if (mTrackingLocation) {
@@ -238,6 +237,11 @@ class MainActivity : AppCompatActivity(), FetchAddressTask.OnTaskCompleted {
             textview_location.text = getString(R.string.address_text,
                     result, System.currentTimeMillis())
         }
+    }
+
+    private fun getLocationPermission() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), REQUEST_LOCATION_PERMISSION)}
     }
 
     override fun onPause() {
