@@ -1,0 +1,4 @@
+#Fri Apr 26 12:39:36 CLST 2019
+base.0=D\:\\pablo\\work\\android\\android-advanced-codelabs\\WalkMyAndroid\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
+renamed.0=classes.dex
