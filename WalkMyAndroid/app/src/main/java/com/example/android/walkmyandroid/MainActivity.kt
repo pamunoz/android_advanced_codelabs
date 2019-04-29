@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
 
     companion object {
         const val REQUEST_LOCATION_PERMISSION = 2
+        const val TRACKING_LOCATION_KEY = "com.example.android.walkmyandroid.tracking_location_key"
     }
 
     @SuppressLint("MissingPermission")
@@ -65,6 +66,9 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
         btn_get_location.setOnClickListener {
             if (!mTrackingLocation) startTrackingLocation() else stopTrackingLocation()
         }
+
+        // Persist the state of the tracking location boolean
+        savedInstanceState?.let { mTrackingLocation = savedInstanceState.getBoolean(TRACKING_LOCATION_KEY) }
 
         mLocationCallBack = object : LocationCallback() {
             override fun onLocationResult(locationResult: LocationResult?) {
@@ -84,6 +88,11 @@ class MainActivity : AppCompatActivity(), OnTaskCompleted {
         if (mTrackingLocation) stopTrackingLocation()
         mTrackingLocation = true
         super.onPause()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        outState.putBoolean(TRACKING_LOCATION_KEY, mTrackingLocation)
+        super.onSaveInstanceState(outState)
     }
 
     private fun startTrackingLocation() {
