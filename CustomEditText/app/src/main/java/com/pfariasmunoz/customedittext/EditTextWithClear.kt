@@ -73,7 +73,9 @@ class EditTextWithClear : AppCompatEditText {
                         text?.clear()
                         hideClearButton()
                         true
-                    } else {}
+                    } else {
+                        false
+                    }
                 } else {
                     false
                 }
