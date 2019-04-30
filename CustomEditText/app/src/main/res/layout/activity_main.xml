@@ -7,10 +7,15 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+            android:id="@+id/et_last_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:inputType="textCapSentences"
+            android:layout_gravity="start"
+            android:textAlignment="viewStart"
+            android:hint="@string/hint_last_name"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
