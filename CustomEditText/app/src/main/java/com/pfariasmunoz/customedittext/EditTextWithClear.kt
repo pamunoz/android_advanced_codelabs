@@ -5,13 +5,14 @@ import android.graphics.drawable.Drawable
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
+import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.res.ResourcesCompat
 
 class EditTextWithClear : AppCompatEditText {
 
-    private val mClearButtonImage: Drawable?
+    private var mClearButtonImage: Drawable?
 
     init {
         mClearButtonImage = ResourcesCompat.getDrawable(resources, R.drawable.ic_clear_opaque_24dp, null)
@@ -56,7 +57,26 @@ class EditTextWithClear : AppCompatEditText {
                     }
                 }
 
-                // TODO: Check for actions if the button is tapped.
+                // Check for actions if the button is tapped.
+                if (isClearButtonClick) {
+                    // Check for ACTION_DOWN (always occurs before ACTION_UP).
+                    if (event.action == MotionEvent.ACTION_DOWN) {
+                        // Switch to the black version of clear button.
+                        mClearButtonImage = ResourcesCompat.getDrawable(resources, R.drawable.ic_clear_black_24dp,null)
+                        showClearButton()
+                    }
+                    // Check for ACTION_UP.
+                    if (event.action == MotionEvent.ACTION_UP) {
+                        // Switch to the opaque version of clear button.
+                        mClearButtonImage = ResourcesCompat.getDrawable(resources, R.drawable.ic_clear_opaque_24dp, null)
+                        // Clear the text and hide the clear button.
+                        text?.clear()
+                        hideClearButton()
+                        true
+                    } else {}
+                } else {
+                    false
+                }
 
             }
             false
