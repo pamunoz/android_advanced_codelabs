@@ -29,6 +29,18 @@ class EditTextWithClear : AppCompatEditText {
             }
 
         })
+        // If the clear (X) button is tapped, clear the text.
+        setOnTouchListener { v, event ->
+            compoundDrawablesRelative[2]?.let {
+                val clearButtonStart: Float // Used for LTR languages
+                val clearButtonEnd: Float // Used for RTL languages
+                val isClearButtonClick = false
+                // TODO: Detect the touch in RTL or LTR layout direction.
+                // TODO: Check for actions if the button is tapped.
+
+            }
+            false
+        }
     }
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
