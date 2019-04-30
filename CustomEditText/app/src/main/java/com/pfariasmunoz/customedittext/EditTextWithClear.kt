@@ -25,7 +25,7 @@ class EditTextWithClear : AppCompatEditText {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                showClearButton()
             }
 
         })
