@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
+import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.res.ResourcesCompat
 
@@ -32,10 +33,29 @@ class EditTextWithClear : AppCompatEditText {
         // If the clear (X) button is tapped, clear the text.
         setOnTouchListener { v, event ->
             compoundDrawablesRelative[2]?.let {
-                val clearButtonStart: Float // Used for LTR languages
-                val clearButtonEnd: Float // Used for RTL languages
-                val isClearButtonClick = false
-                // TODO: Detect the touch in RTL or LTR layout direction.
+                var clearButtonStart: Float // Used for LTR languages
+                var clearButtonEnd: Float // Used for RTL languages
+                var isClearButtonClick = false
+                // Detect the touch in RTL or LTR layout direction.
+                if (layoutDirection == View.LAYOUT_DIRECTION_RTL) {
+                    // If RTL, get the end of the button on the left side.
+                    clearButtonEnd = mClearButtonImage?.intrinsicWidth?.plus(paddingStart.toFloat()) ?: 0f
+                    // If the touch occurred before the end of the button,
+                    // set isClearButtonClicked to true.
+                    if (event.x < clearButtonEnd) {
+                        isClearButtonClick = true
+                    }
+                } else {
+                    // Layout is LTR.
+                    // Get the start of the button on the right side.
+                    clearButtonStart = (width - paddingEnd.toFloat() - mClearButtonImage?.intrinsicWidth!!)
+                    // If the touch occurred after the start of the button,
+                    // set isClearButtonClicked to true.
+                    if (event.x > clearButtonStart) {
+                        isClearButtonClick = true
+                    }
+                }
+
                 // TODO: Check for actions if the button is tapped.
 
             }
