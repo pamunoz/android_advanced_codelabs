@@ -6,6 +6,7 @@ import android.graphics.Paint
 import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.core.content.res.ResourcesCompat
 
 class MainActivity : AppCompatActivity() {
@@ -44,5 +45,12 @@ class MainActivity : AppCompatActivity() {
             color = this@MainActivity.getResColor(R.color.colorPrimaryDark)
             textSize = 70f
         }
+    }
+
+    fun drawSomething(view: View) {
+        val currentWidth = view.width
+        val currentHeight = view.height
+        val halfWidth = currentWidth / 2f
+        val halfHeight = currentHeight / 2f
     }
 }
