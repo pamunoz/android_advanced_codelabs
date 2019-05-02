@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:id="@+id/tv_custom_viw_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:padding="@dimen/basic"
+            android:layout_marginLeft="@dimen/small"
+            android:layout_marginStart="@dimen/small"
+            android:layout_marginRight="@dimen/small"
+            android:layout_marginEnd="@dimen/small"
+            android:layout_marginTop="@dimen/big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fan_control"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <com.pfariasmunoz.customfancontroller.DialView
+            android:id="@+id/img_dial_view"
+            android:layout_width="@dimen/medium_image"
+            android:layout_height="@dimen/medium_image"
+            app:layout_constraintTop_toBottomOf="@id/tv_custom_viw_label"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="@dimen/small"
+            android:layout_marginRight="@dimen/small"
+            android:layout_marginTop="@dimen/small"
+            app:fanOffColor="@color/blue1"
+            app:fanOnColor="@color/red1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
