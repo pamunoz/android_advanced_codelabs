@@ -38,5 +38,11 @@ class MainActivity : AppCompatActivity() {
         mColorBackground = getResColor(R.color.colorBackground)
         mColorRectangle = getResColor(R.color.colorRectangle)
         mColorAccent = getResColor(R.color.colorAccent)
+
+        mPaint.color = mColorBackground
+        mPaintText.apply {
+            color = this@MainActivity.getResColor(R.color.colorPrimaryDark)
+            textSize = 70f
+        }
     }
 }
