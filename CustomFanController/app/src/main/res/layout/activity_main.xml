@@ -33,7 +33,7 @@
             android:layout_marginLeft="@dimen/small"
             android:layout_marginRight="@dimen/small"
             android:layout_marginTop="@dimen/small"
-            app:fanOffColor="@color/gray1"
-            app:fanOnColor="@color/cyan1"/>
+            app:fanOffColor="@color/blue1"
+            app:fanOnColor="@color/red1"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

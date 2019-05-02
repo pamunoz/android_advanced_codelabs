@@ -60,7 +60,6 @@ class DialView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
             mFanOffColor = typedArray.getColor(R.styleable.DialView_fanOffColor, mFanOffColor)
             typedArray.recycle()
         }
-
     }
 
     /**
