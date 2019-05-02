@@ -52,5 +52,27 @@ class MainActivity : AppCompatActivity() {
         val currentHeight = view.height
         val halfWidth = currentWidth / 2f
         val halfHeight = currentHeight / 2f
+        /*
+        mOffset == OFFSET. The app is only in this state the first time the user taps.
+        Create the Bitmap, associate it with the View, create the Canvas, fill the
+        background, and draw some text. Increase the offset.
+         */
+        if (mOffset == OFFSET) {
+
+        } else {
+            /*
+            mOffset != OFFSET and the offset is smaller than half the screen width and height.
+            Draw a rectangle with a computed color and increase the offset.
+             */
+            if (mOffset < halfWidth && mOffset < halfHeight) {
+
+            } else {
+                /*
+                mOffset != OFFSET and the offset is equal to or larger than half
+                the screen width and height. Draw a circle with the text "Done!".
+                 */
+
+            }
+        }
     }
 }
