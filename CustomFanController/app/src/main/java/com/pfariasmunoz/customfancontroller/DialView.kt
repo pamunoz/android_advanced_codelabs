@@ -16,10 +16,10 @@ class DialView : View {
     private val SELECTION_COUNT = 4 // Total number of selections.
     private var mWidth: Float = 0.toFloat()                   // Custom view width.
     private var mHeight: Float = 0.toFloat()                  // Custom view height.
-    private var mTextPaint: Paint? = null               // For text in the view.
-    private var mDialPaint: Paint? = null               // For dial circle in the view.
+    private var mTextPaint: Paint            // For text in the view.
+    private var mDialPaint: Paint           // For dial circle in the view.
     private var mRadius: Float = 0.toFloat()                  // Radius of the circle.
-    private val mActiveSelection: Int   // The active selection.
+    private var mActiveSelection: Int   // The active selection.
     // String buffer for dial labels and float for ComputeXY result.
     /** The mTempLabel and mTempResult member variables provide temporary storage for the result of
      * calculations, and are used to reduce the memory allocations while drawing. */
@@ -38,7 +38,15 @@ class DialView : View {
         }
         // Initialize current selection
         mActiveSelection = 0
-        // TODO: Set up onClick listener for this view.
+        // Set up onClick listener for this view.
+        setOnClickListener {
+            // Rotate the selection to the next valid choice
+            mActiveSelection = (mActiveSelection + 1) % SELECTION_COUNT
+            // Set dial background color if selection is >= 1
+            mDialPaint.color = if (mActiveSelection >= 1) Color.GREEN else Color.GRAY
+            // redraw the view
+            invalidate()
+        }
     }
 
 
@@ -70,11 +78,9 @@ class DialView : View {
         canvas?.drawCircle(mWidth / 2, mHeight / 2, mRadius, mDialPaint)
         // Draw the text labels.
         val labelRadius = mRadius + 20
-        var label = mTempLabel
-        for (i in 0..SELECTION_COUNT) {
-            val xyData = computeXYForPosition(i, labelRadius)
-            val x = xyData[0]
-            val y = xyData[1]
+        val label = mTempLabel
+        for (i in 0 until SELECTION_COUNT) {
+            val (x, y) = computeXYForPosition(i, labelRadius)
             label.apply {
                 setLength(0)
                 append(i)
@@ -83,8 +89,7 @@ class DialView : View {
         }
         // Draw the indicator mark
         val markerRadius = mRadius - 35
-        val xyData = computeXYForPosition(mActiveSelection, markerRadius)
-        val (x, y) = xyData
+        val (x, y) = computeXYForPosition(mActiveSelection, markerRadius)
         canvas?.drawCircle(x, y, 20f, mTextPaint)
     }
 
