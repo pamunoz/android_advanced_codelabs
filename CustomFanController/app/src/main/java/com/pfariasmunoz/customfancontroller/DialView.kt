@@ -4,12 +4,10 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
-import android.os.Build
 import android.util.AttributeSet
 import android.view.View
-import androidx.annotation.RequiresApi
 
-class DialView : View {
+class DialView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
 
     /** The SELECTION_COUNT defines the total number of selections for this custom view.
      * The code is designed so that you can change this value to create a control with more or fewer selections. */
@@ -53,19 +51,9 @@ class DialView : View {
             // redraw the view
             invalidate()
         }
+        // Get the custom attributes (fanOnColor and fanOffColor) if available.
+
     }
-
-
-    constructor(context: Context?) : super(context)
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(
-        context,
-        attrs,
-        defStyleAttr,
-        defStyleRes
-    )
 
     /**
      * The onSizeChanged() method is called when the layout is inflated and when the view has changed.
@@ -108,8 +96,8 @@ class DialView : View {
      *
      *  The pos parameter is a position index (starting at 0). The radius parameter is for the outer circle.
 
-        You will use the computeXYForPosition() method in the onDraw() method. It returns a
-        two-element array for the position, in which element 0 is the X coordinate, and element 1 is the Y coordinate.
+    You will use the computeXYForPosition() method in the onDraw() method. It returns a
+    two-element array for the position, in which element 0 is the X coordinate, and element 1 is the Y coordinate.
      */
     private fun computeXYForPosition(pos: Int, radius: Float): FloatArray {
         val result = mTempResult
