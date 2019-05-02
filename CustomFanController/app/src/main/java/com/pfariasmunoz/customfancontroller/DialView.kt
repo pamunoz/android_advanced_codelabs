@@ -1,6 +1,7 @@
 package com.pfariasmunoz.customfancontroller
 
 import android.content.Context
+import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.os.Build
@@ -62,6 +63,31 @@ class DialView : View {
         mHeight = currentHeight.toFloat()
         mRadius = (Math.min(mWidth, mHeight) / 2f * 0.6f)
     }
+
+    override fun onDraw(canvas: Canvas?) {
+        super.onDraw(canvas)
+        // Draw the dial.
+        canvas?.drawCircle(mWidth / 2, mHeight / 2, mRadius, mDialPaint)
+        // Draw the text labels.
+        val labelRadius = mRadius + 20
+        var label = mTempLabel
+        for (i in 0..SELECTION_COUNT) {
+            val xyData = computeXYForPosition(i, labelRadius)
+            val x = xyData[0]
+            val y = xyData[1]
+            label.apply {
+                setLength(0)
+                append(i)
+            }
+            canvas?.drawText(label, 0, label.length, x, y, mTextPaint)
+        }
+        // Draw the indicator mark
+        val markerRadius = mRadius - 35
+        val xyData = computeXYForPosition(mActiveSelection, markerRadius)
+        val (x, y) = xyData
+        canvas?.drawCircle(x, y, 20f, mTextPaint)
+    }
+
 
     /**
      * compute the X and Y coordinates for the text label and indicator (0, 1, 2, or 3) of the chosen selection,
