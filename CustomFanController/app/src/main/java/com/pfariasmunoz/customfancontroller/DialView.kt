@@ -76,8 +76,9 @@ class DialView : View {
         super.onDraw(canvas)
         // Draw the dial.
         canvas?.drawCircle(mWidth / 2, mHeight / 2, mRadius, mDialPaint)
+
         // Draw the text labels.
-        val labelRadius = mRadius + 20
+        val labelRadius = mRadius + 20f
         val label = mTempLabel
         for (i in 0 until SELECTION_COUNT) {
             val (x, y) = computeXYForPosition(i, labelRadius)
@@ -87,6 +88,7 @@ class DialView : View {
             }
             canvas?.drawText(label, 0, label.length, x, y, mTextPaint)
         }
+
         // Draw the indicator mark
         val markerRadius = mRadius - 35
         val (x, y) = computeXYForPosition(mActiveSelection, markerRadius)
