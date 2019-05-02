@@ -6,6 +6,7 @@ import android.graphics.Paint
 import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.res.ResourcesCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private val mPaintText: Paint = Paint(Paint.UNDERLINE_TEXT_FLAG)
     private val mRect: Rect = Rect()
     private val mBounds: Rect = Rect()
-    
+
     private var mCanvas: Canvas? = null
     private var mBitmap: Bitmap? = null
     private var mOffset = OFFSET
@@ -33,5 +34,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        
     }
 }
