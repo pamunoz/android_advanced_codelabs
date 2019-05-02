@@ -84,6 +84,12 @@ class MainActivity : AppCompatActivity() {
             Draw a rectangle with a computed color and increase the offset.
              */
             if (mOffset < halfWidth && mOffset < halfHeight) {
+                // Change the color by subtracting an integer.
+                mPaint.color = mColorRectangle - MULTIPLIER * mOffset
+                mRect.set(mOffset, mOffset, currentWidth - mOffset, currentHeight - mOffset)
+                mCanvas?.drawRect(mRect, mPaint)
+                // Increase the indent.
+                mOffset += OFFSET
 
             } else {
                 /*
