@@ -9,14 +9,15 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
 
-    private var mCanvas: Canvas? = null
+
     private val mPaint: Paint = Paint()
     private val mPaintText: Paint = Paint(Paint.UNDERLINE_TEXT_FLAG)
-    private var mBitmap: Bitmap? = null
     private val mRect: Rect = Rect()
     private val mBounds: Rect = Rect()
+    
+    private var mCanvas: Canvas? = null
+    private var mBitmap: Bitmap? = null
     private var mOffset = OFFSET
-
     private var mColorBackground: Int = 0
     private var mColorRectangle: Int = 0
     private var mColorAccent: Int = 0
