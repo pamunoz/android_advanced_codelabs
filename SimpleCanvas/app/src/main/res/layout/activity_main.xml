@@ -7,7 +7,7 @@
         tools:context=".MainActivity">
 
     <ImageView
-            android:id="@+id/img_drawing"
+            android:id="@+id/img_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="drawSomething"/>
