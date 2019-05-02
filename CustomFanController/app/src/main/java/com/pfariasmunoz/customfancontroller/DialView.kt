@@ -25,8 +25,14 @@ class DialView : View {
      * calculations, and are used to reduce the memory allocations while drawing. */
     private val mTempLabel = StringBuffer(8)
     private val mTempResult = FloatArray(2)
+    // Set default fan on and fan off colors
+    var mFanOnColor = 0
+    var mFanOffColor = 0
 
     init {
+        // set the default fan colors
+        mFanOnColor = Color.CYAN
+        mFanOffColor = Color.GRAY
         mTextPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
             color = Color.BLACK
             style = Paint.Style.FILL_AND_STROKE
@@ -34,7 +40,7 @@ class DialView : View {
             textSize = 40f
         }
         mDialPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-            color = Color.GRAY
+            color = mFanOffColor
         }
         // Initialize current selection
         mActiveSelection = 0
