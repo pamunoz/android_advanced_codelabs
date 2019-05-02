@@ -1,6 +1,7 @@
 package com.pfariasmunoz.customfancontroller
 
 import android.content.Context
+import android.content.res.TypedArray
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
@@ -52,6 +53,13 @@ class DialView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
             invalidate()
         }
         // Get the custom attributes (fanOnColor and fanOffColor) if available.
+        attrs?.let {
+            val typedArray: TypedArray = getContext().obtainStyledAttributes(attrs, R.styleable.DialView, 0, 0)
+            // set the off and on fan color from the attributes
+            mFanOnColor = typedArray.getColor(R.styleable.DialView_fanOnColor, mFanOnColor)
+            mFanOffColor = typedArray.getColor(R.styleable.DialView_fanOffColor, mFanOffColor)
+            typedArray.recycle()
+        }
 
     }
 
