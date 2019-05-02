@@ -34,6 +34,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        
+
+        mColorBackground = getResColor(R.color.colorBackground)
+        mColorRectangle = getResColor(R.color.colorRectangle)
+        mColorAccent = getResColor(R.color.colorAccent)
     }
 }
