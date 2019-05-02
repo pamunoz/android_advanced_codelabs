@@ -96,6 +96,15 @@ class MainActivity : AppCompatActivity() {
                 mOffset != OFFSET and the offset is equal to or larger than half
                 the screen width and height. Draw a circle with the text "Done!".
                  */
+                mPaint.color = mColorAccent
+                mCanvas?.drawCircle(halfWidth, halfHeight, halfWidth / 3, mPaint)
+                val text = getString(R.string.done)
+                // Get bounding box for text to calculate where to draw it.
+                mPaintText.getTextBounds(text,0, text.length, mBounds)
+                // Calculate x and y for text so it's centered.
+                val x = halfWidth - mBounds.centerX()
+                val y = halfHeight - mBounds.centerY()
+                mCanvas?.drawText(text, x, y, mPaintText)
 
             }
         }
