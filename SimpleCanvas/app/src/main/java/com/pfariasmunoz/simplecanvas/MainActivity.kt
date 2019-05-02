@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.res.ResourcesCompat
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -58,6 +59,24 @@ class MainActivity : AppCompatActivity() {
         background, and draw some text. Increase the offset.
          */
         if (mOffset == OFFSET) {
+            /*
+            create a Bitmap.
+            Supply the width and height for the bitmap, which are going to be the same
+            as the width and height of the view.
+            Pass in a Bitmap.config configuration object. A bitmap configuration
+            describes how pixels are stored. How pixels are stored affects the
+            quality (color depth) as well as the ability to display transparent/translucent
+            colors. The ARGB_8888 format supports Alpha, Red, Green, and Blue channels for
+            each pixel. Each color is encoded in 8 bits, for a total of 4 bytes per pixel.
+
+             */
+            mBitmap = Bitmap.createBitmap(currentWidth, currentHeight, Bitmap.Config.ARGB_8888)
+            img_container.setImageBitmap(mBitmap)
+            mCanvas = Canvas(mBitmap).apply {
+                drawColor(mColorBackground)
+                drawText(getString(R.string.keep_tapping), 100f, 100f, mPaintText)
+                mOffset += OFFSET
+            }
 
         } else {
             /*
@@ -74,5 +93,6 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
+        view.invalidate()
     }
 }
