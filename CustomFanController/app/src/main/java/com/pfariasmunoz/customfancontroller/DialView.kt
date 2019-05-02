@@ -62,4 +62,22 @@ class DialView : View {
         mHeight = currentHeight.toFloat()
         mRadius = (Math.min(mWidth, mHeight) / 2f * 0.6f)
     }
+
+    /**
+     * compute the X and Y coordinates for the text label and indicator (0, 1, 2, or 3) of the chosen selection,
+     * given the position number and radius:
+     *
+     *  The pos parameter is a position index (starting at 0). The radius parameter is for the outer circle.
+
+        You will use the computeXYForPosition() method in the onDraw() method. It returns a
+        two-element array for the position, in which element 0 is the X coordinate, and element 1 is the Y coordinate.
+     */
+    private fun computeXYForPosition(pos: Int, radius: Float): FloatArray {
+        val result = mTempResult
+        val startAngle: Double = Math.PI * (9 / 8.toDouble()) // Angles are in radians
+        val angle: Double = startAngle + (pos * (Math.PI / 4))
+        result[0] = (radius * Math.cos(angle)).toFloat() + (mWidth / 2)
+        result[1] = (radius * Math.sin(angle)).toFloat() + (mHeight / 2)
+        return result
+    }
 }
