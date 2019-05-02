@@ -48,7 +48,7 @@ class DialView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
             // Rotate the selection to the next valid choice
             mActiveSelection = (mActiveSelection + 1) % SELECTION_COUNT
             // Set dial background color if selection is >= 1
-            mDialPaint.color = if (mActiveSelection >= 1) Color.GREEN else Color.GRAY
+            mDialPaint.color = if (mActiveSelection >= 1) mFanOnColor else mFanOffColor
             // redraw the view
             invalidate()
         }
