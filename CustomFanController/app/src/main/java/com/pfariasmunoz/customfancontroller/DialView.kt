@@ -13,11 +13,11 @@ class DialView : View {
     /** The SELECTION_COUNT defines the total number of selections for this custom view.
      * The code is designed so that you can change this value to create a control with more or fewer selections. */
     private val SELECTION_COUNT = 4 // Total number of selections.
-    private val mWidth: Float = 0.toFloat()                   // Custom view width.
-    private val mHeight: Float = 0.toFloat()                  // Custom view height.
+    private var mWidth: Float = 0.toFloat()                   // Custom view width.
+    private var mHeight: Float = 0.toFloat()                  // Custom view height.
     private var mTextPaint: Paint? = null               // For text in the view.
     private var mDialPaint: Paint? = null               // For dial circle in the view.
-    private val mRadius: Float = 0.toFloat()                  // Radius of the circle.
+    private var mRadius: Float = 0.toFloat()                  // Radius of the circle.
     private val mActiveSelection: Int   // The active selection.
     // String buffer for dial labels and float for ComputeXY result.
     /** The mTempLabel and mTempResult member variables provide temporary storage for the result of
@@ -51,4 +51,15 @@ class DialView : View {
         defStyleAttr,
         defStyleRes
     )
+
+    /**
+     * The onSizeChanged() method is called when the layout is inflated and when the view has changed.
+     * Its parameters are the current width and height of the view, and the "old" (previous) width and height.
+     */
+    override fun onSizeChanged(currentWith: Int, currentHeight: Int, oldWidth: Int, oldHeight: Int) {
+        // Calculate the radius from with and height
+        mWidth = currentWith.toFloat()
+        mHeight = currentHeight.toFloat()
+        mRadius = (Math.min(mWidth, mHeight) / 2f * 0.6f)
+    }
 }
