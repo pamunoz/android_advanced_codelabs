@@ -31,5 +31,13 @@ class ClippedView : View {
     private val mTextOffSet = getDimen(R.dimen.textOffset)
     private val mTextSize = getDimen(R.dimen.textSize)
 
+    // convenience member variables for row and column coordinates so that you only have to calculate them once
+    private val mColumnOne = mRectInset
+    private val mColumnTwo = mColumnOne + mRectInset + mClipRectRight
+    private val mRowOne = mRectInset
+    private val mRowTwo = mRowOne + mRectInset + mClipRectBottom
+    private val mRowThree = mRowTwo + mRectInset + mClipRectBottom
+    private val mRowFour = mRowThree + mRectInset + mClipRectBottom
+    private val mTextRow = mRowFour + (1.5 * mClipRectBottom).toInt()
 
 }
