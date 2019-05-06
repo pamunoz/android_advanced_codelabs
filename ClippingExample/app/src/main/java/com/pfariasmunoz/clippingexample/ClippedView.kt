@@ -3,11 +3,13 @@ package com.pfariasmunoz.clippingexample
 import android.content.Context
 import android.graphics.Paint
 import android.graphics.Path
+import android.graphics.Rect
 import android.graphics.RectF
+import android.os.Build
 import android.util.AttributeSet
 import android.view.View
 
-class ClippedView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
+class ClippedView(context: Context?, attrs: AttributeSet? = null) : View(context, attrs) {
 
     private var mPaint: Paint? = null
     private var mPath: Path? = null
@@ -31,5 +33,16 @@ class ClippedView(context: Context?, attrs: AttributeSet?) : View(context, attrs
     private val mRowThree = mRowTwo + mRectInset + mClipRectBottom
     private val mRowFour = mRowThree + mRectInset + mClipRectBottom
     private val mTextRow = mRowFour + (1.5 * mClipRectBottom).toInt()
+
+    init {
+        isFocusable = true
+        mPaint = Paint().apply {
+            isAntiAlias = true
+            strokeWidth = getDimen(R.dimen.strokeWidth).toFloat()
+            textSize = getDimen(R.dimen.textSize).toFloat()
+        }
+        mPath = Path()
+        mRectF = RectF(Rect(mRectInset, mRectInset, mClipRectRight - mRectInset, mClipRectBottom - mRectInset))
+    }
 
 }
