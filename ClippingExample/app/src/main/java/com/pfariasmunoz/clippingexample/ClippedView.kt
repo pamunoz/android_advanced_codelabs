@@ -41,6 +41,20 @@ class ClippedView(context: Context?, attrs: AttributeSet? = null) : View(context
         mRectF = RectF(Rect(mRectInset, mRectInset, mClipRectRight - mRectInset, mClipRectBottom - mRectInset))
     }
 
+    override fun onDraw(canvas: Canvas?) {
+        canvas?.apply {
+            drawColor(Color.GRAY)
+            // Save the drawing state of the canvas.
+            save()
+            // Translate the origin of the canvas to the top-left corner of the first rectangle.
+            translate(mColumnOne.toFloat(), mRowOne.toFloat())
+            // Call the drawClippedRectangle() method to draw the first rectangle.
+            drawClippedRectangle(this)
+            // Restore the previous state of the canvas.
+            restore()
+        }
+    }
+
     private fun drawClippedRectangle(canvas: Canvas) {
         canvas.apply {
             // Set the boundaries of the clipping rectangle for whole picture.
