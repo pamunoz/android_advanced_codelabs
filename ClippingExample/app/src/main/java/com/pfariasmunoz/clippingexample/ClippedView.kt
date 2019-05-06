@@ -21,4 +21,15 @@ class ClippedView : View {
         defStyleRes
     )
 
+    private val mClipRectRight = getDimen(R.dimen.clipRectRight)
+    private val mClipRectBottom = getDimen(R.dimen.clipRectBottom)
+    private val mClipRectTop = getDimen(R.dimen.clipRectTop)
+    private val mClipRectLeft = getDimen(R.dimen.clipRectLeft)
+    private val mRectInset = getDimen(R.dimen.rectInset)
+    private val mSmallRectOffSet = getDimen(R.dimen.smallRectOffset)
+    private val mCircleRadius = getDimen(R.dimen.circleRadius)
+    private val mTextOffSet = getDimen(R.dimen.textOffset)
+    private val mTextSize = getDimen(R.dimen.textSize)
+
+
 }
