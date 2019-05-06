@@ -2,6 +2,7 @@ package com.pfariasmunoz.clippingexample
 
 import android.content.Context
 import android.graphics.*
+import android.os.Build
 import android.util.AttributeSet
 import android.view.View
 
@@ -43,6 +44,8 @@ class ClippedView(context: Context?, attrs: AttributeSet? = null) : View(context
 
     override fun onDraw(canvas: Canvas?) {
         canvas?.apply {
+
+            // FIRST RECTANGLE
             drawColor(Color.GRAY)
             // Save the drawing state of the canvas.
             save()
@@ -51,6 +54,34 @@ class ClippedView(context: Context?, attrs: AttributeSet? = null) : View(context
             // Call the drawClippedRectangle() method to draw the first rectangle.
             drawClippedRectangle(this)
             // Restore the previous state of the canvas.
+            restore()
+
+            // SECOND RECTANGLE
+            // Draw a rectangle that uses the difference between two
+            // clipping rectangles to create a picture frame effect.
+            save()
+            // Move the origin to the right for the next rectangle.
+            translate(mColumnTwo.toFloat(), mRowOne.toFloat())
+            // Use the subtraction of two clipping rectangles to create a frame.
+            clipRect(2 * mRectInset, 2 * mRectInset, mClipRectRight - 2 * mRectInset, mClipRectBottom - 2 * mRectInset)
+            // The method clipRect(float, float, float, float, Region.Op
+            // .DIFFERENCE) was deprecated in API level 26. The recommended
+            // alternative method is clipOutRect(float, float, float, float),
+            // which is currently available in API level 26 and higher.
+            if(Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+                clipRect(
+                    4.toFloat() * mRectInset,
+                    4.toFloat() * mRectInset,
+                    mClipRectRight - 4.toFloat() * mRectInset,
+                    mClipRectBottom - 4.toFloat() * mRectInset, Region.Op.DIFFERENCE)
+            } else {
+                clipOutRect(
+                    4.toFloat() * mRectInset,
+                    4.toFloat() * mRectInset,
+                    mClipRectRight.toFloat() - 4 * mRectInset,
+                    mClipRectBottom.toFloat() - 4 * mRectInset)
+            }
+            drawClippedRectangle(this)
             restore()
         }
     }
