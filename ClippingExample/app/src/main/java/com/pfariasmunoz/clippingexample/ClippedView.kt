@@ -3,6 +3,7 @@ package com.pfariasmunoz.clippingexample
 import android.content.Context
 import android.graphics.Paint
 import android.graphics.Path
+import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
 
@@ -10,6 +11,7 @@ class ClippedView : View {
 
     private var mPaint: Paint? = null
     private var mPath: Path? = null
+    private var mRectF: RectF? = null
 
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
