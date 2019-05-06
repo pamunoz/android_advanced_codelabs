@@ -108,6 +108,35 @@ class ClippedView(context: Context?, attrs: AttributeSet? = null) : View(context
             }
             drawClippedRectangle(this)
             restore()
+
+            // FOUR RECTANGLE, INTERSECTION OF TWO
+            // Use the intersection of two rectangles as the clipping region.
+            save()
+            translate(mColumnTwo.toFloat(), mRowTwo.toFloat())
+            clipRect(
+                mClipRectLeft.toFloat(),
+                mClipRectTop.toFloat(),
+                mClipRectRight.toFloat() - mSmallRectOffSet,
+                mClipRectBottom.toFloat() - mSmallRectOffSet)
+            // The method clipRect(float, float, float, float, Region.Op
+            // .INTERSECT) was deprecated in API level 26. The recommended
+            // alternative method is clipRect(float, float, float, float), which
+            // is currently available in API level 26 and higher.
+            if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+                clipRect(
+                    mClipRectLeft.toFloat() + mSmallRectOffSet,
+                    mClipRectTop.toFloat() + mSmallRectOffSet,
+                    mClipRectRight.toFloat(),
+                    mClipRectBottom.toFloat(), Region.Op.INTERSECT)
+            } else {
+                clipRect(
+                    mClipRectLeft.toFloat() + mSmallRectOffSet,
+                    mClipRectTop.toFloat() + mSmallRectOffSet,
+                    mClipRectRight.toFloat(),
+                    mClipRectBottom.toFloat())
+            }
+            drawClippedRectangle(this)
+            restore()
         }
     }
 
