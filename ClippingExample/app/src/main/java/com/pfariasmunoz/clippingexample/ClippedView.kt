@@ -20,4 +20,5 @@ class ClippedView : View {
         defStyleAttr,
         defStyleRes
     )
+
 }
