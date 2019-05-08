@@ -3,6 +3,7 @@ package com.pfariasmunoz.surfaceviewexample
 import android.content.Context
 import android.graphics.*
 import android.os.Build
+import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import java.lang.Exception
@@ -126,6 +127,30 @@ class GamveView(context: Context?) : SurfaceView(context), Runnable {
         mPaint?.textSize = mViewHeight.toFloat() / 5
         mBitmap = BitmapFactory.decodeResource(context.resources, R.drawable.android)
         setUpBitmap()
+    }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        val x = event?.x
+        val y = event?.y
+        // Invalidate() is inside the case statements because there are
+        // many other motion events, and we don't want to invalidate
+        // the view for those.
+        when(event?.action) {
+            MotionEvent.ACTION_DOWN -> {
+                setUpBitmap()
+                updateFrame(x!!, y!!)
+                invalidate()
+            }
+            MotionEvent.ACTION_MOVE -> {
+                updateFrame(x!!, y!!)
+                invalidate()
+            }
+        }
+        return true
+    }
+
+    private fun updateFrame(newX: Float, newY: Float) {
+        mFlashlightCone?.update(newX.toInt(), newY.toInt())
     }
 
 }
