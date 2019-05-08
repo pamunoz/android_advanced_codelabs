@@ -187,6 +187,20 @@ class ClippedView(context: Context?, attrs: AttributeSet? = null) : View(context
                 mClipRectBottom.toFloat() - 2f * mRectInset)
             drawClippedRectangle(this)
             restore()
+
+            // Draw the transform text
+            // Draw text with a translate transformation applied
+            save()
+            mPaint?.apply {
+                color = Color.CYAN
+                // Align the RIGHT side of the text with the origin.
+                textAlign = Paint.Align.LEFT
+            }
+            // Apply transformation to canvas.
+            translate(mColumnTwo.toFloat(), mTextRow.toFloat())
+            // Draw Text.
+            drawText(context.getString(R.string.trnaslated), 0f, 0f, mPaint)
+            restore()
         }
     }
 
