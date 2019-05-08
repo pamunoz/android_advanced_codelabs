@@ -159,6 +159,22 @@ class ClippedView(context: Context?, attrs: AttributeSet? = null) : View(context
             clipPath(mPath)
             drawClippedRectangle(this)
             restore()
+
+            //  a rounded rectangle which is a commonly used clipping shape:
+            // Use a rounded rectangle. Use mClipRectRight/4 to draw a circle.
+            save()
+            translate(mColumnTwo.toFloat(), mRowThree.toFloat())
+            mPath?.apply {
+                rewind()
+                addRoundRect(
+                    mRectF,
+                    mClipRectRight.toFloat() / 4,
+                    mClipRectRight.toFloat() / 4,
+                    Path.Direction.CCW)
+            }
+            clipPath(mPath)
+            drawClippedRectangle(this)
+            restore()
         }
     }
 
