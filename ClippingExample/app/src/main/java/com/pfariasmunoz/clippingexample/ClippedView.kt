@@ -175,6 +175,18 @@ class ClippedView(context: Context?, attrs: AttributeSet? = null) : View(context
             clipPath(mPath)
             drawClippedRectangle(this)
             restore()
+
+            // clip the outside around the rectangle.
+            save()
+            // Move the origin to the right for the next rectangle.
+            translate(mColumnOne.toFloat(), mRowFour.toFloat())
+            clipRect(
+                2f * mRectInset,
+                2f * mRectInset,
+                mClipRectRight.toFloat() - 2f * mRectInset,
+                mClipRectBottom.toFloat() - 2f * mRectInset)
+            drawClippedRectangle(this)
+            restore()
         }
     }
 
