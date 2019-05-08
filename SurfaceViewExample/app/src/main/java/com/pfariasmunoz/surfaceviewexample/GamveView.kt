@@ -2,7 +2,7 @@ package com.pfariasmunoz.surfaceviewexample
 
 import android.content.Context
 import android.graphics.*
-import android.view.SurfaceHolder
+import android.os.Build
 import android.view.SurfaceView
 
 /**
@@ -11,7 +11,6 @@ import android.view.SurfaceView
  * of the user's finger. Shows the "win" message when winning conditions are met.
  */
 class GamveView(context: Context?) : SurfaceView(context), Runnable {
-    var mSurfaceHolder: SurfaceHolder? = null
     var mPaint: Paint? = null
     var mPath: Path? = null
     var mBitmapX: Int = 0
@@ -25,7 +24,36 @@ class GamveView(context: Context?) : SurfaceView(context), Runnable {
     var mFlashlightCone: FlashlightCone? = null
 
     override fun run() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        var canvas: Canvas
+        while (mRunning) {
+            // Check whether there is a valid Surface available for drawing. If not, do nothing.
+            if (holder.surface.isValid) {
+                val x = mFlashlightCone?.x
+                val y = mFlashlightCone?.y
+                val radius = mFlashlightCone?.radius
+                try {
+                    canvas = holder.lockCanvas()
+                    canvas.apply {
+                        save()
+                        drawColor(Color.WHITE)
+                        drawBitmap(mBitmap!!, mBitmapX.toFloat(), mBitmapY.toFloat(), mPaint)
+                    }
+                    // Set the circle as the clipping path using the DIFFERENCE operator, so that's what's inside the circle is clipped (not drawn).
+                    mPath?.addCircle(x?.toFloat()!!, y?.toFloat()!!, radius?.toFloat()!!, Path.Direction.CCW)
+                    // The method clipPath(path, Region.Op.DIFFERENCE) was
+                    // deprecated in API level 26. The recommended alternative
+                    // method is clipOutPath(Path), which is currently available
+                    // in API level 26 and higher.
+                    if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+                        canvas.clipPath(mPath!!, Region.Op.DIFFERENCE)
+                    } else {
+                        canvas.clipOutPath(mPath!!)
+                    }
+                    canvas.drawColor(Color.BLACK)
+
+                }
+            }
+        }
     }
 
     fun pause() {
@@ -46,7 +74,6 @@ class GamveView(context: Context?) : SurfaceView(context), Runnable {
     }
 
     init {
-        mSurfaceHolder = holder
         mPaint = Paint().apply {
             color = Color.DKGRAY
         }
@@ -57,7 +84,7 @@ class GamveView(context: Context?) : SurfaceView(context), Runnable {
      * calculates a random location on the screen for the Android image that the user has to find.
      * You also need a way to calculate whether the user has found the bitmap.
      */
-    fun setUpBitmap() {
+    private fun setUpBitmap() {
         // Set mBitmapX and mBitmapY to random x and y positions that fall inside the screen.
         mBitmapX = (Math.floor(Math.random() * (mViewWidth - mBitmap?.width!!)).toInt())
         mBitmapY = (Math.floor(Math.random() * (mViewHeight - mBitmap?.height!!)).toInt())
