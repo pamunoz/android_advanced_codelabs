@@ -3,7 +3,9 @@ package com.pfariasmunoz.surfaceviewexample
 import android.content.Context
 import android.graphics.*
 import android.os.Build
+import android.view.SurfaceHolder
 import android.view.SurfaceView
+import java.lang.Exception
 
 /**
  * A custom SurfaceView where game play takes place. Responds to motion events on the screen.
@@ -11,6 +13,7 @@ import android.view.SurfaceView
  * of the user's finger. Shows the "win" message when winning conditions are met.
  */
 class GamveView(context: Context?) : SurfaceView(context), Runnable {
+    var mGameHolder: SurfaceHolder? = null
     var mPaint: Paint? = null
     var mPath: Path? = null
     var mBitmapX: Int = 0
@@ -27,31 +30,43 @@ class GamveView(context: Context?) : SurfaceView(context), Runnable {
         var canvas: Canvas
         while (mRunning) {
             // Check whether there is a valid Surface available for drawing. If not, do nothing.
-            if (holder.surface.isValid) {
+            if (mGameHolder?.surface?.isValid!!) {
                 val x = mFlashlightCone?.x
                 val y = mFlashlightCone?.y
                 val radius = mFlashlightCone?.radius
-                try {
-                    canvas = holder.lockCanvas()
+                canvas = mGameHolder?.lockCanvas()!!
+                canvas.apply {
+                    save()
+                    drawColor(Color.WHITE)
+                    drawBitmap(mBitmap!!, mBitmapX.toFloat(), mBitmapY.toFloat(), mPaint)
+                }
+                // Set the circle as the clipping path using the DIFFERENCE operator, so that's what's inside the circle is clipped (not drawn).
+                mPath?.addCircle(x?.toFloat()!!, y?.toFloat()!!, radius?.toFloat()!!, Path.Direction.CCW)
+                // The method clipPath(path, Region.Op.DIFFERENCE) was
+                // deprecated in API level 26. The recommended alternative
+                // method is clipOutPath(Path), which is currently available
+                // in API level 26 and higher.
+                if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+                    canvas.clipPath(mPath!!, Region.Op.DIFFERENCE)
+                } else {
+                    canvas.clipOutPath(mPath!!)
+                }
+                canvas.drawColor(Color.BLACK)
+                // Check whether the the center of the flashlight circle is inside the winning rectangle.
+                // If so, color the canvas white, redraw the Android image, and draw the winning message.
+                if (x!! > mWinnerRectF?.left!! && x < mWinnerRectF?.right!!
+                    && y!! > mWinnerRectF?.top!! && x < mWinnerRectF?.bottom!!) {
                     canvas.apply {
-                        save()
                         drawColor(Color.WHITE)
                         drawBitmap(mBitmap!!, mBitmapX.toFloat(), mBitmapY.toFloat(), mPaint)
+                        drawText("WIN!!", mViewWidth.toFloat() / 3, mViewHeight.toFloat() / 2, mPaint )
                     }
-                    // Set the circle as the clipping path using the DIFFERENCE operator, so that's what's inside the circle is clipped (not drawn).
-                    mPath?.addCircle(x?.toFloat()!!, y?.toFloat()!!, radius?.toFloat()!!, Path.Direction.CCW)
-                    // The method clipPath(path, Region.Op.DIFFERENCE) was
-                    // deprecated in API level 26. The recommended alternative
-                    // method is clipOutPath(Path), which is currently available
-                    // in API level 26 and higher.
-                    if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
-                        canvas.clipPath(mPath!!, Region.Op.DIFFERENCE)
-                    } else {
-                        canvas.clipOutPath(mPath!!)
-                    }
-                    canvas.drawColor(Color.BLACK)
+                    mPath?.rewind()
+                    canvas.restore()
 
                 }
+
+                mGameHolder?.unlockCanvasAndPost(canvas)
             }
         }
     }
@@ -74,6 +89,7 @@ class GamveView(context: Context?) : SurfaceView(context), Runnable {
     }
 
     init {
+        mGameHolder = holder
         mPaint = Paint().apply {
             color = Color.DKGRAY
         }
