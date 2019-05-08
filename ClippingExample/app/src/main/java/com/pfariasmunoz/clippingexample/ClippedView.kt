@@ -137,6 +137,28 @@ class ClippedView(context: Context?, attrs: AttributeSet? = null) : View(context
             }
             drawClippedRectangle(this)
             restore()
+
+            // combine shapes and draw any path to define a clipping region.
+            // You can combine shapes and draw any path to define a clipping region.
+            save()
+            translate(mColumnOne.toFloat(), mRowThree.toFloat())
+            mPath?.apply {
+                rewind()
+                addCircle(
+                    mClipRectLeft.toFloat() + mRectInset + mCircleRadius,
+                    mClipRectTop.toFloat() + mCircleRadius + mRectInset,
+                    mCircleRadius.toFloat(),
+                    Path.Direction.CCW)
+                addRect(
+                    mClipRectRight.toFloat() / 2 - mCircleRadius,
+                    mClipRectTop.toFloat() + mCircleRadius + mRectInset,
+                    mClipRectRight.toFloat() / 2 + mCircleRadius,
+                    mClipRectBottom.toFloat() - mRectInset,
+                    Path.Direction.CCW)
+            }
+            clipPath(mPath)
+            drawClippedRectangle(this)
+            restore()
         }
     }
 
