@@ -11,8 +11,6 @@ import android.view.SurfaceView
  * of the user's finger. Shows the "win" message when winning conditions are met.
  */
 class GamveView(context: Context?) : SurfaceView(context), Runnable {
-
-    var mContext: Context? = null
     var mSurfaceHolder: SurfaceHolder? = null
     var mPaint: Paint? = null
     var mPath: Path? = null
@@ -24,6 +22,7 @@ class GamveView(context: Context?) : SurfaceView(context), Runnable {
     var mBitmap: Bitmap? = null
     var mRunning: Boolean = true
     var mGameThread: Thread? = null
+    var mFlashlightCone: FlashlightCone? = null
 
     override fun run() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -47,7 +46,6 @@ class GamveView(context: Context?) : SurfaceView(context), Runnable {
     }
 
     init {
-        mContext = context
         mSurfaceHolder = holder
         mPaint = Paint().apply {
             color = Color.DKGRAY
@@ -70,6 +68,21 @@ class GamveView(context: Context?) : SurfaceView(context), Runnable {
             (mBitmapX + mBitmap?.width!!).toFloat(),
             (mBitmapY + mBitmap?.height!!).toFloat()
         )
+    }
+
+    /**
+     *  is called every time the view changes.The view starts out with 0 dimensions.
+     *  When the view is first inflated, its size changes and onSizeChangedMethod()
+     *  is called. Unlike in onCreate(), the view's correct dimensions are available.
+     */
+    override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
+        super.onSizeChanged(width, height, oldWidth, oldHeight)
+        mViewWidth = width
+        mViewHeight = height
+        mFlashlightCone = FlashlightCone(mViewWidth, mViewHeight)
+        mPaint?.textSize = mViewHeight.toFloat() / 5
+        mBitmap = BitmapFactory.decodeResource(context.resources, R.drawable.android)
+        setUpBitmap()
     }
 
 }
