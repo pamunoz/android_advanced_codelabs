@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
+
         // Lock the screen orientation into landscape. Games often lock the screen orientation.
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         // Create an instance of GameView.
@@ -22,6 +22,15 @@ class MainActivity : AppCompatActivity() {
         }
         // Set mGameView as the content view for MainActivity.
         setContentView(mGameView)
+    }
 
+    override fun onPause() {
+        super.onPause()
+        mGameView?.pause()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mGameView?.resume()
     }
 }
