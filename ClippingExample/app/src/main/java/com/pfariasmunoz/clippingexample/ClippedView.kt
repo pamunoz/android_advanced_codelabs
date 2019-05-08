@@ -201,6 +201,20 @@ class ClippedView(context: Context?, attrs: AttributeSet? = null) : View(context
             // Draw Text.
             drawText(context.getString(R.string.trnaslated), 0f, 0f, mPaint)
             restore()
+
+            // Draw text with a translate and skew transformations applied.
+            save()
+            mPaint?.apply {
+                textSize = mTextSize.toFloat()
+                textAlign = Paint.Align.RIGHT
+            }
+            // Position Text.
+            translate(mColumnTwo.toFloat(), mTextRow.toFloat())
+            // Apply skew transformation.
+            skew(0.2f, 0.3f)
+            drawText(context.getString(R.string.skewed), 0f, 0f, mPaint)
+            restore()
+            // End of onDraw()
         }
     }
 
