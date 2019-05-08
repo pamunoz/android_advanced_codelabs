@@ -13,7 +13,7 @@ import java.lang.Exception
  * Draws the game screen in a separate thread, with the flashlight cone at the current position
  * of the user's finger. Shows the "win" message when winning conditions are met.
  */
-class GamveView(context: Context?) : SurfaceView(context), Runnable {
+class GameView(context: Context?) : SurfaceView(context), Runnable {
     var mGameHolder: SurfaceHolder? = null
     var mPaint: Paint? = null
     var mPath: Path? = null
