@@ -21,18 +21,29 @@ class GamveView(context: Context?) : SurfaceView(context), Runnable {
     var mWinnerRectF: RectF? = null
     var mViewWidth: Int = 0
     var mViewHeight: Int = 0
-    var mBitmap: Bitmap? ? = null
+    var mBitmap: Bitmap? = null
+    var mRunning: Boolean = true
+    var mGameThread: Thread? = null
 
     override fun run() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     fun pause() {
+        mRunning = false
+        try {
+            // Stop the thread (rejoin the main thread)
+            mGameThread?.join()
+        } catch (e: InterruptedException) {
+
+        }
 
     }
 
     fun resume() {
-
+        mRunning = true
+        mGameThread = Thread(this)
+        mGameThread?.start()
     }
 
     init {
@@ -52,7 +63,7 @@ class GamveView(context: Context?) : SurfaceView(context), Runnable {
         // Set mBitmapX and mBitmapY to random x and y positions that fall inside the screen.
         mBitmapX = (Math.floor(Math.random() * (mViewWidth - mBitmap?.width!!)).toInt())
         mBitmapY = (Math.floor(Math.random() * (mViewHeight - mBitmap?.height!!)).toInt())
-        // Define a rectangular bounding box that contains the Android image. 
+        // Define a rectangular bounding box that contains the Android image.
         mWinnerRectF = RectF(
             mBitmapX.toFloat(),
             mBitmapY.toFloat(),
