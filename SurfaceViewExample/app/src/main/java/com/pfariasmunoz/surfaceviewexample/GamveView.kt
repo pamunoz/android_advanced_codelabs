@@ -138,19 +138,16 @@ class GamveView(context: Context?) : SurfaceView(context), Runnable {
         when(event?.action) {
             MotionEvent.ACTION_DOWN -> {
                 setUpBitmap()
-                updateFrame(x!!, y!!)
+                mFlashlightCone?.update(x?.toInt()!!, y?.toInt()!!)
                 invalidate()
             }
             MotionEvent.ACTION_MOVE -> {
-                updateFrame(x!!, y!!)
+                mFlashlightCone?.update(x?.toInt()!!, y?.toInt()!!)
                 invalidate()
             }
         }
         return true
     }
 
-    private fun updateFrame(newX: Float, newY: Float) {
-        mFlashlightCone?.update(newX.toInt(), newY.toInt())
-    }
 
 }
