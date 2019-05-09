@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     private var mCurrentPosition = 0
 
     companion object {
-        const val VIDEO_SAMPLE = "tacoma_narrows"
+        const val VIDEO_SAMPLE = "https://developers.google.com/training/images/tacoma_narrows.mp4"
         const val PLAYBACK_TIME = "play_time    "
     }
 
