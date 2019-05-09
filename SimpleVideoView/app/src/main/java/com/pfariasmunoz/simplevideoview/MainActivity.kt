@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         const val VIDEO_SAMPLE = "tacoma_narrows"
-        const val PLAYBACK_TIME = "play_time"
+        const val PLAYBACK_TIME = "play_time    "
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +37,12 @@ class MainActivity : AppCompatActivity() {
     private fun initializePlayer() {
         val videoUri = getMedia(VIDEO_SAMPLE)
         vv_video.setVideoURI(videoUri)
+        if (mCurrentPosition > 0) {
+            vv_video.seekTo(mCurrentPosition)
+        } else {
+            // Skipping to 1 shows the first frame of the video
+            vv_video.seekTo(1)
+        }
         vv_video.start()
     }
 
