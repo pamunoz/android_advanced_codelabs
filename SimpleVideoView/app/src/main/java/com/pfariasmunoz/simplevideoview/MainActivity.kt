@@ -1,6 +1,7 @@
 package com.pfariasmunoz.simplevideoview
 
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
      * actual filename in the app's resource directory is tacoma_narrows.mp4,
      * the string name and resulting resource name do not include the extension.
      */
-    private fun getMedia(mediaName: String): Uri = Uri.parse("android:resource://$packageName/raw/$mediaName")
+    private fun getMedia(mediaName: String): Uri = Uri.parse("android.resource://$packageName/raw/$mediaName")
 
     private fun initializePlayer() {
         val videoUri = getMedia(VIDEO_SAMPLE)
@@ -31,4 +32,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun releasePlayer() = vv_video.stopPlayback()
+
+    override fun onStart() {
+        super.onStart()
+        initializePlayer()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        releasePlayer()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
+            vv_video.pause()
+        }
+    }
 }
