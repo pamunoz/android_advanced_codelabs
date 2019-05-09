@@ -9,8 +9,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    private var mCurrentPosition = 0
+
     companion object {
         const val VIDEO_SAMPLE = "tacoma_narrows"
+        const val PLAYBACK_TIME = "play_time"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
