@@ -1,6 +1,7 @@
 package com.pfariasmunoz.propertyanimation
 
 import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.Color
 import android.graphics.Paint
@@ -46,6 +47,13 @@ class PulseAnimationView(context: Context?, attrs: AttributeSet? = null) : View(
         val shrinkAnimator = ObjectAnimator.ofFloat(this,"radius", width.toFloat(), 0f).apply {
             duration = ANIMATION_DURATION.toLong()
             interpolator = LinearOutSlowInInterpolator()
+            startDelay = ANIMATION_DELAY
+        }
+        val repeatAnimator = ObjectAnimator.ofFloat(this,"radius", 0f, width.toFloat()).apply {
+            duration = ANIMATION_DURATION.toLong()
+            startDelay = ANIMATION_DELAY
+            repeatCount = 1
+            repeatMode = ValueAnimator.REVERSE
         }
     }
 
