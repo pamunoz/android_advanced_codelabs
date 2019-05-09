@@ -19,7 +19,7 @@ class PulseAnimationView(context: Context?, attrs: AttributeSet? = null) : View(
         set(value) {
             field = value
             // adjust the color
-            mPaint.color = Color.GREEN + radius.toInt() / COLOR_ADJUSTER
+            mPaint.color = Color.GREEN + (radius / COLOR_ADJUSTER).toInt()
             invalidate()
         }
     private val mPaint: Paint = Paint()
@@ -43,6 +43,8 @@ class PulseAnimationView(context: Context?, attrs: AttributeSet? = null) : View(
             mXpos = event.x
             mYpos = event.y
         }
+        if (mPulseAnimatorSet.isRunning) mPulseAnimatorSet.cancel()
+        mPulseAnimatorSet.start()
         return super.onTouchEvent(event)
     }
 
