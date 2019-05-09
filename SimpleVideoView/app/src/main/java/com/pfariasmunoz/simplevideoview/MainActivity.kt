@@ -4,9 +4,11 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.URLUtil
 import android.widget.MediaController
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,7 +37,16 @@ class MainActivity : AppCompatActivity() {
      * actual filename in the app's resource directory is tacoma_narrows.mp4,
      * the string name and resulting resource name do not include the extension.
      */
-    private fun getMedia(mediaName: String): Uri = Uri.parse("android.resource://$packageName/raw/$mediaName")
+    private fun getMedia(mediaName: String): Uri {
+        return if (URLUtil.isValidUrl(mediaName)) {
+            // media name is an external url
+            Uri.parse(mediaName)
+        } else {
+            // media name is a raw resource embedded in the app
+            Uri.parse("android.resource://$packageName/raw/$mediaName")
+        }
+
+    }
 
     private fun initializePlayer() {
         val videoUri = getMedia(VIDEO_SAMPLE)
