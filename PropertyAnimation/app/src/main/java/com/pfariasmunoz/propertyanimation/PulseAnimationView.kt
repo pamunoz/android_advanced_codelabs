@@ -22,6 +22,8 @@ class PulseAnimationView(context: Context?, attrs: AttributeSet? = null) : View(
 
     companion object {
         const val COLOR_ADJUSTER = 5
+        const val ANIMATION_DURATION = 4000
+        const val ANIMATION_DELAY = 1000L
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
