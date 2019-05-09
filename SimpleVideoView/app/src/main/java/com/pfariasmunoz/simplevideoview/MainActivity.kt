@@ -5,6 +5,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.MediaController
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -46,6 +47,12 @@ class MainActivity : AppCompatActivity() {
             vv_video.seekTo(1)
         }
         vv_video.start()
+
+        vv_video.setOnCompletionListener {
+            Toast.makeText(this@MainActivity, "Playback completed", Toast.LENGTH_SHORT).show()
+            // reset to the beginning
+            vv_video.seekTo(1)
+        }
     }
 
     private fun releasePlayer() = vv_video.stopPlayback()
