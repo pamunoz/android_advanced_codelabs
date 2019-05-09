@@ -3,6 +3,7 @@ package com.pfariasmunoz.simplevideoview
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,4 +23,10 @@ class MainActivity : AppCompatActivity() {
      * the string name and resulting resource name do not include the extension.
      */
     private fun getMedia(mediaName: String): Uri = Uri.parse("android:resource://$packageName/raw/$mediaName")
+
+    private fun initializePlayer(){
+        val videoUri = getMedia(VIDEO_SAMPLE)
+        vv_video.setVideoURI(videoUri)
+        vv_video.start()
+    }
 }
