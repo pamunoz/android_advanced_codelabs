@@ -1,5 +1,6 @@
 package com.pfariasmunoz.propertyanimation
 
+import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Context
@@ -23,6 +24,7 @@ class PulseAnimationView(context: Context?, attrs: AttributeSet? = null) : View(
     private val mPaint: Paint = Paint()
     private var mXpos: Float = 0f
     private var mYpos: Float = 0f
+    private val mPulseAnimatorSet: AnimatorSet = AnimatorSet()
 
     companion object {
         const val COLOR_ADJUSTER = 5
