@@ -1,11 +1,14 @@
 package com.pfariasmunoz.propertyanimation
 
+import android.animation.ObjectAnimator
 import android.content.Context
 import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
+import android.view.animation.LinearInterpolator
+import androidx.interpolator.view.animation.LinearOutSlowInInterpolator
 
 class PulseAnimationView(context: Context?, attrs: AttributeSet? = null) : View(context, attrs) {
 
@@ -32,6 +35,18 @@ class PulseAnimationView(context: Context?, attrs: AttributeSet? = null) : View(
             mYpos = event.y
         }
         return super.onTouchEvent(event)
+    }
+
+    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
+        super.onSizeChanged(w, h, oldw, oldh)
+        val growAnimator = ObjectAnimator.ofFloat(this,"radius", 0f, width.toFloat()).apply {
+            duration = ANIMATION_DURATION.toLong()
+            interpolator = LinearInterpolator()
+        }
+        val shrinkAnimator = ObjectAnimator.ofFloat(this,"radius", width.toFloat(), 0f).apply {
+            duration = ANIMATION_DURATION.toLong()
+            interpolator = LinearOutSlowInInterpolator()
+        }
     }
 
 }
