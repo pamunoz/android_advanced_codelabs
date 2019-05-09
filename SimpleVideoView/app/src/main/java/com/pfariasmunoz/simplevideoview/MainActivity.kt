@@ -2,14 +2,13 @@ package com.pfariasmunoz.simplevideoview
 
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.URLUtil
 import android.widget.MediaController
 import android.widget.Toast
 import android.widget.VideoView
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         const val VIDEO_SAMPLE = "https://developers.google.com/training/images/tacoma_narrows.mp4"
-        const val PLAYBACK_TIME = "play_time    "
+        const val PLAYBACK_TIME = "play_time"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,10 +49,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initializePlayer() {
+        // Show the "Buffering..." message while the video loads.
+        tv_buffering.visibility = VideoView.VISIBLE
+
+        // Buffer and decode the video sample.
         val videoUri = getMedia(VIDEO_SAMPLE)
         vv_video.setVideoURI(videoUri)
 
         vv_video.setOnPreparedListener {
+            // Hide buffering message.
             tv_buffering.visibility = VideoView.INVISIBLE
             if (mCurrentPosition > 0) {
                 vv_video.seekTo(mCurrentPosition)
@@ -67,7 +71,7 @@ class MainActivity : AppCompatActivity() {
         vv_video.setOnCompletionListener {
             Toast.makeText(this@MainActivity, "Playback completed", Toast.LENGTH_SHORT).show()
             // reset to the beginning
-            vv_video.seekTo(1)
+            vv_video.seekTo(0)
         }
     }
 
