@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.webkit.URLUtil
 import android.widget.MediaController
 import android.widget.Toast
+import android.widget.VideoView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -58,6 +59,10 @@ class MainActivity : AppCompatActivity() {
             vv_video.seekTo(1)
         }
         vv_video.start()
+
+        vv_video.setOnPreparedListener {
+            tv_buffering.visibility = VideoView.INVISIBLE
+        }
 
         vv_video.setOnCompletionListener {
             Toast.makeText(this@MainActivity, "Playback completed", Toast.LENGTH_SHORT).show()
