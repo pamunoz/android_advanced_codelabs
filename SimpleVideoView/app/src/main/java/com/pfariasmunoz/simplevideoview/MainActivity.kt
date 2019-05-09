@@ -48,6 +48,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun releasePlayer() = vv_video.stopPlayback()
 
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        outState?.putInt(PLAYBACK_TIME, vv_video.currentPosition)
+    }
+
     override fun onStart() {
         super.onStart()
         initializePlayer()
