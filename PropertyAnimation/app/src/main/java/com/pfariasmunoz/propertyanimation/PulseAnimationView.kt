@@ -57,6 +57,10 @@ class PulseAnimationView(context: Context?, attrs: AttributeSet? = null) : View(
             repeatCount = 1
             repeatMode = ValueAnimator.REVERSE
         }
+        mPulseAnimatorSet.apply {
+            play(growAnimator).before(shrinkAnimator)
+            play(repeatAnimator).after(shrinkAnimator)
+        }
     }
 
 }
