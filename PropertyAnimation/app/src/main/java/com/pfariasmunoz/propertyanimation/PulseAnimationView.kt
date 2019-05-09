@@ -4,6 +4,7 @@ import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Context
+import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
@@ -30,6 +31,11 @@ class PulseAnimationView(context: Context?, attrs: AttributeSet? = null) : View(
         const val COLOR_ADJUSTER = 5
         const val ANIMATION_DURATION = 4000
         const val ANIMATION_DELAY = 1000L
+    }
+
+    override fun onDraw(canvas: Canvas?) {
+        super.onDraw(canvas)
+        canvas?.drawCircle(mXpos, mYpos, radius, mPaint)
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
