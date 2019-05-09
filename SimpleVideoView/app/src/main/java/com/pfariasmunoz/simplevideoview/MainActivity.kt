@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        savedInstanceState?.let { mCurrentPosition = savedInstanceState.getInt(PLAYBACK_TIME) }
+
         val controller = MediaController(this).apply {
             setMediaPlayer(vv_video)
         }
