@@ -24,9 +24,11 @@ class MainActivity : AppCompatActivity() {
      */
     private fun getMedia(mediaName: String): Uri = Uri.parse("android:resource://$packageName/raw/$mediaName")
 
-    private fun initializePlayer(){
+    private fun initializePlayer() {
         val videoUri = getMedia(VIDEO_SAMPLE)
         vv_video.setVideoURI(videoUri)
         vv_video.start()
     }
+
+    private fun releasePlayer() = vv_video.stopPlayback()
 }
